@@ -1,0 +1,2188 @@
+
+W5100TCPBootloader.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001a  00800200  0003eb48  00000bfc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000b48  0003e000  0003e000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000001  0080021a  0080021a  00000c16  2**0
+                  ALLOC
+  3 .eeprom       00000013  00810000  00810000  00000c16  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .comment      00000030  00000000  00000000  00000c29  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000b0  00000000  00000000  00000c59  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000014d8  00000000  00000000  00000d09  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000429  00000000  00000000  000021e1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000009ea  00000000  00000000  0000260a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000344  00000000  00000000  00002ff4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000004dd  00000000  00000000  00003338  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001393  00000000  00000000  00003815  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c0  00000000  00000000  00004ba8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+0003e000 <__vectors>:
+   3e000:	78 c0       	rjmp	.+240    	; 0x3e0f2 <__ctors_end>
+   3e002:	00 00       	nop
+   3e004:	95 c0       	rjmp	.+298    	; 0x3e130 <__bad_interrupt>
+   3e006:	00 00       	nop
+   3e008:	93 c0       	rjmp	.+294    	; 0x3e130 <__bad_interrupt>
+   3e00a:	00 00       	nop
+   3e00c:	91 c0       	rjmp	.+290    	; 0x3e130 <__bad_interrupt>
+   3e00e:	00 00       	nop
+   3e010:	8f c0       	rjmp	.+286    	; 0x3e130 <__bad_interrupt>
+   3e012:	00 00       	nop
+   3e014:	8d c0       	rjmp	.+282    	; 0x3e130 <__bad_interrupt>
+   3e016:	00 00       	nop
+   3e018:	8b c0       	rjmp	.+278    	; 0x3e130 <__bad_interrupt>
+   3e01a:	00 00       	nop
+   3e01c:	89 c0       	rjmp	.+274    	; 0x3e130 <__bad_interrupt>
+   3e01e:	00 00       	nop
+   3e020:	87 c0       	rjmp	.+270    	; 0x3e130 <__bad_interrupt>
+   3e022:	00 00       	nop
+   3e024:	85 c0       	rjmp	.+266    	; 0x3e130 <__bad_interrupt>
+   3e026:	00 00       	nop
+   3e028:	83 c0       	rjmp	.+262    	; 0x3e130 <__bad_interrupt>
+   3e02a:	00 00       	nop
+   3e02c:	81 c0       	rjmp	.+258    	; 0x3e130 <__bad_interrupt>
+   3e02e:	00 00       	nop
+   3e030:	7f c0       	rjmp	.+254    	; 0x3e130 <__bad_interrupt>
+   3e032:	00 00       	nop
+   3e034:	7d c0       	rjmp	.+250    	; 0x3e130 <__bad_interrupt>
+   3e036:	00 00       	nop
+   3e038:	7b c0       	rjmp	.+246    	; 0x3e130 <__bad_interrupt>
+   3e03a:	00 00       	nop
+   3e03c:	79 c0       	rjmp	.+242    	; 0x3e130 <__bad_interrupt>
+   3e03e:	00 00       	nop
+   3e040:	77 c0       	rjmp	.+238    	; 0x3e130 <__bad_interrupt>
+   3e042:	00 00       	nop
+   3e044:	76 c0       	rjmp	.+236    	; 0x3e132 <__vector_17>
+   3e046:	00 00       	nop
+   3e048:	73 c0       	rjmp	.+230    	; 0x3e130 <__bad_interrupt>
+   3e04a:	00 00       	nop
+   3e04c:	71 c0       	rjmp	.+226    	; 0x3e130 <__bad_interrupt>
+   3e04e:	00 00       	nop
+   3e050:	6f c0       	rjmp	.+222    	; 0x3e130 <__bad_interrupt>
+   3e052:	00 00       	nop
+   3e054:	6d c0       	rjmp	.+218    	; 0x3e130 <__bad_interrupt>
+   3e056:	00 00       	nop
+   3e058:	6b c0       	rjmp	.+214    	; 0x3e130 <__bad_interrupt>
+   3e05a:	00 00       	nop
+   3e05c:	69 c0       	rjmp	.+210    	; 0x3e130 <__bad_interrupt>
+   3e05e:	00 00       	nop
+   3e060:	67 c0       	rjmp	.+206    	; 0x3e130 <__bad_interrupt>
+   3e062:	00 00       	nop
+   3e064:	65 c0       	rjmp	.+202    	; 0x3e130 <__bad_interrupt>
+   3e066:	00 00       	nop
+   3e068:	63 c0       	rjmp	.+198    	; 0x3e130 <__bad_interrupt>
+   3e06a:	00 00       	nop
+   3e06c:	61 c0       	rjmp	.+194    	; 0x3e130 <__bad_interrupt>
+   3e06e:	00 00       	nop
+   3e070:	5f c0       	rjmp	.+190    	; 0x3e130 <__bad_interrupt>
+   3e072:	00 00       	nop
+   3e074:	5d c0       	rjmp	.+186    	; 0x3e130 <__bad_interrupt>
+   3e076:	00 00       	nop
+   3e078:	5b c0       	rjmp	.+182    	; 0x3e130 <__bad_interrupt>
+   3e07a:	00 00       	nop
+   3e07c:	59 c0       	rjmp	.+178    	; 0x3e130 <__bad_interrupt>
+   3e07e:	00 00       	nop
+   3e080:	57 c0       	rjmp	.+174    	; 0x3e130 <__bad_interrupt>
+   3e082:	00 00       	nop
+   3e084:	55 c0       	rjmp	.+170    	; 0x3e130 <__bad_interrupt>
+   3e086:	00 00       	nop
+   3e088:	53 c0       	rjmp	.+166    	; 0x3e130 <__bad_interrupt>
+   3e08a:	00 00       	nop
+   3e08c:	51 c0       	rjmp	.+162    	; 0x3e130 <__bad_interrupt>
+   3e08e:	00 00       	nop
+   3e090:	4f c0       	rjmp	.+158    	; 0x3e130 <__bad_interrupt>
+   3e092:	00 00       	nop
+   3e094:	4d c0       	rjmp	.+154    	; 0x3e130 <__bad_interrupt>
+   3e096:	00 00       	nop
+   3e098:	4b c0       	rjmp	.+150    	; 0x3e130 <__bad_interrupt>
+   3e09a:	00 00       	nop
+   3e09c:	49 c0       	rjmp	.+146    	; 0x3e130 <__bad_interrupt>
+   3e09e:	00 00       	nop
+   3e0a0:	47 c0       	rjmp	.+142    	; 0x3e130 <__bad_interrupt>
+   3e0a2:	00 00       	nop
+   3e0a4:	45 c0       	rjmp	.+138    	; 0x3e130 <__bad_interrupt>
+   3e0a6:	00 00       	nop
+   3e0a8:	43 c0       	rjmp	.+134    	; 0x3e130 <__bad_interrupt>
+   3e0aa:	00 00       	nop
+   3e0ac:	41 c0       	rjmp	.+130    	; 0x3e130 <__bad_interrupt>
+   3e0ae:	00 00       	nop
+   3e0b0:	3f c0       	rjmp	.+126    	; 0x3e130 <__bad_interrupt>
+   3e0b2:	00 00       	nop
+   3e0b4:	3d c0       	rjmp	.+122    	; 0x3e130 <__bad_interrupt>
+   3e0b6:	00 00       	nop
+   3e0b8:	3b c0       	rjmp	.+118    	; 0x3e130 <__bad_interrupt>
+   3e0ba:	00 00       	nop
+   3e0bc:	39 c0       	rjmp	.+114    	; 0x3e130 <__bad_interrupt>
+   3e0be:	00 00       	nop
+   3e0c0:	37 c0       	rjmp	.+110    	; 0x3e130 <__bad_interrupt>
+   3e0c2:	00 00       	nop
+   3e0c4:	35 c0       	rjmp	.+106    	; 0x3e130 <__bad_interrupt>
+   3e0c6:	00 00       	nop
+   3e0c8:	33 c0       	rjmp	.+102    	; 0x3e130 <__bad_interrupt>
+   3e0ca:	00 00       	nop
+   3e0cc:	31 c0       	rjmp	.+98     	; 0x3e130 <__bad_interrupt>
+   3e0ce:	00 00       	nop
+   3e0d0:	2f c0       	rjmp	.+94     	; 0x3e130 <__bad_interrupt>
+   3e0d2:	00 00       	nop
+   3e0d4:	2d c0       	rjmp	.+90     	; 0x3e130 <__bad_interrupt>
+   3e0d6:	00 00       	nop
+   3e0d8:	2b c0       	rjmp	.+86     	; 0x3e130 <__bad_interrupt>
+   3e0da:	00 00       	nop
+   3e0dc:	29 c0       	rjmp	.+82     	; 0x3e130 <__bad_interrupt>
+   3e0de:	00 00       	nop
+   3e0e0:	27 c0       	rjmp	.+78     	; 0x3e130 <__bad_interrupt>
+   3e0e2:	00 00       	nop
+   3e0e4:	15 f2       	brhs	.-124    	; 0x3e06a <__vectors+0x6a>
+   3e0e6:	b5 f2       	brhs	.-84     	; 0x3e094 <__vectors+0x94>
+   3e0e8:	ed f2       	brhs	.-70     	; 0x3e0a4 <__vectors+0xa4>
+   3e0ea:	11 f3       	breq	.-60     	; 0x3e0b0 <__vectors+0xb0>
+   3e0ec:	34 f3       	brlt	.-52     	; 0x3e0ba <__vectors+0xba>
+   3e0ee:	4e f3       	brts	.-46     	; 0x3e0c2 <__vectors+0xc2>
+   3e0f0:	6a f2       	brmi	.-102    	; 0x3e08c <__vectors+0x8c>
+
+0003e0f2 <__ctors_end>:
+   3e0f2:	11 24       	eor	r1, r1
+   3e0f4:	1f be       	out	0x3f, r1	; 63
+   3e0f6:	cf ef       	ldi	r28, 0xFF	; 255
+   3e0f8:	d1 e2       	ldi	r29, 0x21	; 33
+   3e0fa:	de bf       	out	0x3e, r29	; 62
+   3e0fc:	cd bf       	out	0x3d, r28	; 61
+   3e0fe:	01 e0       	ldi	r16, 0x01	; 1
+   3e100:	0c bf       	out	0x3c, r16	; 60
+
+0003e102 <__do_copy_data>:
+   3e102:	12 e0       	ldi	r17, 0x02	; 2
+   3e104:	a0 e0       	ldi	r26, 0x00	; 0
+   3e106:	b2 e0       	ldi	r27, 0x02	; 2
+   3e108:	e8 e4       	ldi	r30, 0x48	; 72
+   3e10a:	fb ee       	ldi	r31, 0xEB	; 235
+   3e10c:	03 e0       	ldi	r16, 0x03	; 3
+   3e10e:	0b bf       	out	0x3b, r16	; 59
+   3e110:	02 c0       	rjmp	.+4      	; 0x3e116 <__do_copy_data+0x14>
+   3e112:	07 90       	elpm	r0, Z+
+   3e114:	0d 92       	st	X+, r0
+   3e116:	aa 31       	cpi	r26, 0x1A	; 26
+   3e118:	b1 07       	cpc	r27, r17
+   3e11a:	d9 f7       	brne	.-10     	; 0x3e112 <__do_copy_data+0x10>
+
+0003e11c <__do_clear_bss>:
+   3e11c:	22 e0       	ldi	r18, 0x02	; 2
+   3e11e:	aa e1       	ldi	r26, 0x1A	; 26
+   3e120:	b2 e0       	ldi	r27, 0x02	; 2
+   3e122:	01 c0       	rjmp	.+2      	; 0x3e126 <.do_clear_bss_start>
+
+0003e124 <.do_clear_bss_loop>:
+   3e124:	1d 92       	st	X+, r1
+
+0003e126 <.do_clear_bss_start>:
+   3e126:	ab 31       	cpi	r26, 0x1B	; 27
+   3e128:	b2 07       	cpc	r27, r18
+   3e12a:	e1 f7       	brne	.-8      	; 0x3e124 <.do_clear_bss_loop>
+   3e12c:	f5 d0       	rcall	.+490    	; 0x3e318 <main>
+   3e12e:	0a c5       	rjmp	.+2580   	; 0x3eb44 <_exit>
+
+0003e130 <__bad_interrupt>:
+   3e130:	67 cf       	rjmp	.-306    	; 0x3e000 <__vectors>
+
+0003e132 <__vector_17>:
+unsigned char EEMEM SubNetMask [4] = {255,255,255,0};
+unsigned char EEMEM MacAddress [6] = {0xDE,0xAD,0xBE,0xEF,0xFE,0xED};
+unsigned char EEMEM DeviceIPAddress [4] = {10,0,0,75};
+
+ISR(TIMER1_COMPA_vect)	//One second timer interrupt
+{
+   3e132:	1f 92       	push	r1
+   3e134:	0f 92       	push	r0
+   3e136:	0f b6       	in	r0, 0x3f	; 63
+   3e138:	0f 92       	push	r0
+   3e13a:	11 24       	eor	r1, r1
+   3e13c:	8f 93       	push	r24
+	if(Sec_Timeout > 0)	
+   3e13e:	80 91 1a 02 	lds	r24, 0x021A
+   3e142:	88 23       	and	r24, r24
+   3e144:	41 f0       	breq	.+16     	; 0x3e156 <__vector_17+0x24>
+	{
+		//only decrement the timeout if its above 0
+		//as the timeout check is a check to see if Sec_Timeout is 0
+		
+		PORTB ^= 1 << 7; //flash/toggle the LED each second to signal we are in boot loader mode
+   3e146:	85 b1       	in	r24, 0x05	; 5
+   3e148:	80 58       	subi	r24, 0x80	; 128
+   3e14a:	85 b9       	out	0x05, r24	; 5
+		Sec_Timeout--;
+   3e14c:	80 91 1a 02 	lds	r24, 0x021A
+   3e150:	81 50       	subi	r24, 0x01	; 1
+   3e152:	80 93 1a 02 	sts	0x021A, r24
+	}
+}
+   3e156:	8f 91       	pop	r24
+   3e158:	0f 90       	pop	r0
+   3e15a:	0f be       	out	0x3f, r0	; 63
+   3e15c:	0f 90       	pop	r0
+   3e15e:	1f 90       	pop	r1
+   3e160:	18 95       	reti
+
+0003e162 <write_IP_EEPROM>:
+
+//Write IP settings into EEPROM
+void write_IP_EEPROM(unsigned char gateway_ip[4],unsigned char subnet_mask[4],
+					 unsigned char mac_address[6],unsigned char device_ip_address[4])
+{
+   3e162:	ef 92       	push	r14
+   3e164:	ff 92       	push	r15
+   3e166:	0f 93       	push	r16
+   3e168:	1f 93       	push	r17
+   3e16a:	cf 93       	push	r28
+   3e16c:	df 93       	push	r29
+   3e16e:	8b 01       	movw	r16, r22
+   3e170:	ea 01       	movw	r28, r20
+   3e172:	79 01       	movw	r14, r18
+	eeprom_update_block((const void*)gateway_ip , GateWayIP, 4);
+   3e174:	44 e0       	ldi	r20, 0x04	; 4
+   3e176:	50 e0       	ldi	r21, 0x00	; 0
+   3e178:	6e e0       	ldi	r22, 0x0E	; 14
+   3e17a:	70 e0       	ldi	r23, 0x00	; 0
+   3e17c:	b4 d4       	rcall	.+2408   	; 0x3eae6 <__eeupd_block_m2560>
+	eeprom_update_block((const void*)subnet_mask , SubNetMask, 4);
+   3e17e:	44 e0       	ldi	r20, 0x04	; 4
+   3e180:	50 e0       	ldi	r21, 0x00	; 0
+   3e182:	6a e0       	ldi	r22, 0x0A	; 10
+   3e184:	70 e0       	ldi	r23, 0x00	; 0
+   3e186:	c8 01       	movw	r24, r16
+   3e188:	ae d4       	rcall	.+2396   	; 0x3eae6 <__eeupd_block_m2560>
+	eeprom_update_block((const void*)mac_address , MacAddress, 6);
+   3e18a:	46 e0       	ldi	r20, 0x06	; 6
+   3e18c:	50 e0       	ldi	r21, 0x00	; 0
+   3e18e:	64 e0       	ldi	r22, 0x04	; 4
+   3e190:	70 e0       	ldi	r23, 0x00	; 0
+   3e192:	ce 01       	movw	r24, r28
+   3e194:	a8 d4       	rcall	.+2384   	; 0x3eae6 <__eeupd_block_m2560>
+	eeprom_update_block((const void*)device_ip_address , DeviceIPAddress, 4);
+   3e196:	44 e0       	ldi	r20, 0x04	; 4
+   3e198:	50 e0       	ldi	r21, 0x00	; 0
+   3e19a:	60 e0       	ldi	r22, 0x00	; 0
+   3e19c:	70 e0       	ldi	r23, 0x00	; 0
+   3e19e:	c7 01       	movw	r24, r14
+}
+   3e1a0:	df 91       	pop	r29
+   3e1a2:	cf 91       	pop	r28
+   3e1a4:	1f 91       	pop	r17
+   3e1a6:	0f 91       	pop	r16
+   3e1a8:	ff 90       	pop	r15
+   3e1aa:	ef 90       	pop	r14
+					 unsigned char mac_address[6],unsigned char device_ip_address[4])
+{
+	eeprom_update_block((const void*)gateway_ip , GateWayIP, 4);
+	eeprom_update_block((const void*)subnet_mask , SubNetMask, 4);
+	eeprom_update_block((const void*)mac_address , MacAddress, 6);
+	eeprom_update_block((const void*)device_ip_address , DeviceIPAddress, 4);
+   3e1ac:	9c c4       	rjmp	.+2360   	; 0x3eae6 <__eeupd_block_m2560>
+
+0003e1ae <read_IP_EEPROM>:
+}
+
+//Read IP settings from EEPROM
+void read_IP_EEPROM(unsigned char gateway_ip[4],unsigned char subnet_mask[4],
+					unsigned char mac_address[6], unsigned char device_ip_address[4])
+{
+   3e1ae:	ef 92       	push	r14
+   3e1b0:	ff 92       	push	r15
+   3e1b2:	0f 93       	push	r16
+   3e1b4:	1f 93       	push	r17
+   3e1b6:	cf 93       	push	r28
+   3e1b8:	df 93       	push	r29
+   3e1ba:	8b 01       	movw	r16, r22
+   3e1bc:	ea 01       	movw	r28, r20
+   3e1be:	79 01       	movw	r14, r18
+	eeprom_read_block((void*)gateway_ip , GateWayIP, 4);
+   3e1c0:	44 e0       	ldi	r20, 0x04	; 4
+   3e1c2:	50 e0       	ldi	r21, 0x00	; 0
+   3e1c4:	6e e0       	ldi	r22, 0x0E	; 14
+   3e1c6:	70 e0       	ldi	r23, 0x00	; 0
+   3e1c8:	76 d4       	rcall	.+2284   	; 0x3eab6 <__eerd_block_m2560>
+	eeprom_read_block((void*)subnet_mask , SubNetMask, 4);
+   3e1ca:	44 e0       	ldi	r20, 0x04	; 4
+   3e1cc:	50 e0       	ldi	r21, 0x00	; 0
+   3e1ce:	6a e0       	ldi	r22, 0x0A	; 10
+   3e1d0:	70 e0       	ldi	r23, 0x00	; 0
+   3e1d2:	c8 01       	movw	r24, r16
+   3e1d4:	70 d4       	rcall	.+2272   	; 0x3eab6 <__eerd_block_m2560>
+	eeprom_read_block((void*)mac_address , MacAddress, 6);
+   3e1d6:	46 e0       	ldi	r20, 0x06	; 6
+   3e1d8:	50 e0       	ldi	r21, 0x00	; 0
+   3e1da:	64 e0       	ldi	r22, 0x04	; 4
+   3e1dc:	70 e0       	ldi	r23, 0x00	; 0
+   3e1de:	ce 01       	movw	r24, r28
+   3e1e0:	6a d4       	rcall	.+2260   	; 0x3eab6 <__eerd_block_m2560>
+	eeprom_read_block((void*)device_ip_address , DeviceIPAddress, 4);
+   3e1e2:	44 e0       	ldi	r20, 0x04	; 4
+   3e1e4:	50 e0       	ldi	r21, 0x00	; 0
+   3e1e6:	60 e0       	ldi	r22, 0x00	; 0
+   3e1e8:	70 e0       	ldi	r23, 0x00	; 0
+   3e1ea:	c7 01       	movw	r24, r14
+}
+   3e1ec:	df 91       	pop	r29
+   3e1ee:	cf 91       	pop	r28
+   3e1f0:	1f 91       	pop	r17
+   3e1f2:	0f 91       	pop	r16
+   3e1f4:	ff 90       	pop	r15
+   3e1f6:	ef 90       	pop	r14
+					unsigned char mac_address[6], unsigned char device_ip_address[4])
+{
+	eeprom_read_block((void*)gateway_ip , GateWayIP, 4);
+	eeprom_read_block((void*)subnet_mask , SubNetMask, 4);
+	eeprom_read_block((void*)mac_address , MacAddress, 6);
+	eeprom_read_block((void*)device_ip_address , DeviceIPAddress, 4);
+   3e1f8:	5e c4       	rjmp	.+2236   	; 0x3eab6 <__eerd_block_m2560>
+
+0003e1fa <boot_program_page>:
+}
+
+void boot_program_page (uint32_t page, uint8_t *buf)
+{
+   3e1fa:	4f 92       	push	r4
+   3e1fc:	5f 92       	push	r5
+   3e1fe:	6f 92       	push	r6
+   3e200:	7f 92       	push	r7
+   3e202:	bf 92       	push	r11
+   3e204:	cf 92       	push	r12
+   3e206:	df 92       	push	r13
+   3e208:	ef 92       	push	r14
+   3e20a:	ff 92       	push	r15
+   3e20c:	0f 93       	push	r16
+   3e20e:	1f 93       	push	r17
+   3e210:	cf 93       	push	r28
+   3e212:	df 93       	push	r29
+	uint8_t sreg = SREG;	//Save current interrupts
+   3e214:	cf b7       	in	r28, 0x3f	; 63
+	
+	cli();					//Disable interrupts
+   3e216:	f8 94       	cli
+	
+	uint32_t Page_Add = page*SPM_PAGESIZE; //get the first address of the selected page
+   3e218:	00 27       	eor	r16, r16
+   3e21a:	16 2f       	mov	r17, r22
+   3e21c:	27 2f       	mov	r18, r23
+   3e21e:	38 2f       	mov	r19, r24
+	
+	eeprom_busy_wait ();
+   3e220:	f9 99       	sbic	0x1f, 1	; 31
+   3e222:	fe cf       	rjmp	.-4      	; 0x3e220 <boot_program_page+0x26>
+	boot_page_erase (Page_Add);
+   3e224:	83 e0       	ldi	r24, 0x03	; 3
+   3e226:	f8 01       	movw	r30, r16
+   3e228:	20 93 5b 00 	sts	0x005B, r18
+   3e22c:	80 93 57 00 	sts	0x0057, r24
+   3e230:	e8 95       	spm
+	boot_spm_busy_wait ();	//Wait until the memory is erased
+   3e232:	07 b6       	in	r0, 0x37	; 55
+   3e234:	00 fc       	sbrc	r0, 0
+   3e236:	fd cf       	rjmp	.-6      	; 0x3e232 <boot_program_page+0x38>
+   3e238:	41 2c       	mov	r4, r1
+   3e23a:	51 2c       	mov	r5, r1
+   3e23c:	32 01       	movw	r6, r4
+	for (uint16_t i=0; i<SPM_PAGESIZE; i+=2)
+	{
+		//Set up little-endian word, and write one word at a time
+		uint16_t w = *buf++;
+		w += (*buf++) << 8;
+		boot_page_fill (Page_Add + i, w);
+   3e23e:	d1 e0       	ldi	r29, 0x01	; 1
+   3e240:	fa 01       	movw	r30, r20
+   3e242:	e4 0d       	add	r30, r4
+   3e244:	f5 1d       	adc	r31, r5
+	boot_spm_busy_wait ();	//Wait until the memory is erased
+	
+	for (uint16_t i=0; i<SPM_PAGESIZE; i+=2)
+	{
+		//Set up little-endian word, and write one word at a time
+		uint16_t w = *buf++;
+   3e246:	b0 80       	ld	r11, Z
+   3e248:	73 01       	movw	r14, r6
+   3e24a:	62 01       	movw	r12, r4
+   3e24c:	c0 0e       	add	r12, r16
+   3e24e:	d1 1e       	adc	r13, r17
+   3e250:	e2 1e       	adc	r14, r18
+   3e252:	f3 1e       	adc	r15, r19
+		w += (*buf++) << 8;
+   3e254:	a1 81       	ldd	r26, Z+1	; 0x01
+   3e256:	b0 e0       	ldi	r27, 0x00	; 0
+   3e258:	ba 2f       	mov	r27, r26
+   3e25a:	aa 27       	eor	r26, r26
+   3e25c:	ab 0d       	add	r26, r11
+   3e25e:	b1 1d       	adc	r27, r1
+		boot_page_fill (Page_Add + i, w);
+   3e260:	0d 01       	movw	r0, r26
+   3e262:	f6 01       	movw	r30, r12
+   3e264:	e0 92 5b 00 	sts	0x005B, r14
+   3e268:	d0 93 57 00 	sts	0x0057, r29
+   3e26c:	e8 95       	spm
+   3e26e:	11 24       	eor	r1, r1
+   3e270:	82 e0       	ldi	r24, 0x02	; 2
+   3e272:	48 0e       	add	r4, r24
+   3e274:	51 1c       	adc	r5, r1
+   3e276:	61 1c       	adc	r6, r1
+   3e278:	71 1c       	adc	r7, r1
+	
+	eeprom_busy_wait ();
+	boot_page_erase (Page_Add);
+	boot_spm_busy_wait ();	//Wait until the memory is erased
+	
+	for (uint16_t i=0; i<SPM_PAGESIZE; i+=2)
+   3e27a:	41 14       	cp	r4, r1
+   3e27c:	81 e0       	ldi	r24, 0x01	; 1
+   3e27e:	58 06       	cpc	r5, r24
+   3e280:	61 04       	cpc	r6, r1
+   3e282:	71 04       	cpc	r7, r1
+   3e284:	e9 f6       	brne	.-70     	; 0x3e240 <boot_program_page+0x46>
+		//Set up little-endian word, and write one word at a time
+		uint16_t w = *buf++;
+		w += (*buf++) << 8;
+		boot_page_fill (Page_Add + i, w);
+	}
+	boot_page_write (Page_Add); //Store buffer in flash page
+   3e286:	85 e0       	ldi	r24, 0x05	; 5
+   3e288:	f8 01       	movw	r30, r16
+   3e28a:	20 93 5b 00 	sts	0x005B, r18
+   3e28e:	80 93 57 00 	sts	0x0057, r24
+   3e292:	e8 95       	spm
+	boot_spm_busy_wait();	//Wait until the memory is written
+   3e294:	07 b6       	in	r0, 0x37	; 55
+   3e296:	00 fc       	sbrc	r0, 0
+   3e298:	fd cf       	rjmp	.-6      	; 0x3e294 <boot_program_page+0x9a>
+	
+	SREG = sreg;			//Restore interrupts (if any were set)
+   3e29a:	cf bf       	out	0x3f, r28	; 63
+}
+   3e29c:	df 91       	pop	r29
+   3e29e:	cf 91       	pop	r28
+   3e2a0:	1f 91       	pop	r17
+   3e2a2:	0f 91       	pop	r16
+   3e2a4:	ff 90       	pop	r15
+   3e2a6:	ef 90       	pop	r14
+   3e2a8:	df 90       	pop	r13
+   3e2aa:	cf 90       	pop	r12
+   3e2ac:	bf 90       	pop	r11
+   3e2ae:	7f 90       	pop	r7
+   3e2b0:	6f 90       	pop	r6
+   3e2b2:	5f 90       	pop	r5
+   3e2b4:	4f 90       	pop	r4
+   3e2b6:	08 95       	ret
+
+0003e2b8 <boot_read_page>:
+
+void boot_read_page (uint32_t page, uint8_t *buf)
+{
+   3e2b8:	cf 92       	push	r12
+   3e2ba:	df 92       	push	r13
+   3e2bc:	ef 92       	push	r14
+   3e2be:	ff 92       	push	r15
+   3e2c0:	0f 93       	push	r16
+   3e2c2:	1f 93       	push	r17
+	boot_rww_enable ();		//Enable reading of main flash
+   3e2c4:	21 e1       	ldi	r18, 0x11	; 17
+   3e2c6:	20 93 57 00 	sts	0x0057, r18
+   3e2ca:	e8 95       	spm
+	while(boot_rww_busy());	//Wait till main flash section is ready for reading
+   3e2cc:	07 b6       	in	r0, 0x37	; 55
+   3e2ce:	06 fc       	sbrc	r0, 6
+   3e2d0:	fd cf       	rjmp	.-6      	; 0x3e2cc <boot_read_page+0x14>
+	uint32_t Page_Add = page*SPM_PAGESIZE; //get the first address of the selected page
+   3e2d2:	cc 24       	eor	r12, r12
+   3e2d4:	d6 2e       	mov	r13, r22
+   3e2d6:	e7 2e       	mov	r14, r23
+   3e2d8:	f8 2e       	mov	r15, r24
+   3e2da:	da 01       	movw	r26, r20
+   3e2dc:	40 e0       	ldi	r20, 0x00	; 0
+   3e2de:	50 e0       	ldi	r21, 0x00	; 0
+   3e2e0:	ba 01       	movw	r22, r20
+	
+	//read the page one byte at a time into the buffer
+	for (uint16_t i = 0; i < SPM_PAGESIZE; i++ )
+	{
+		buf[i] = pgm_read_byte_far((Page_Add)+i);
+   3e2e2:	8a 01       	movw	r16, r20
+   3e2e4:	9b 01       	movw	r18, r22
+   3e2e6:	0c 0d       	add	r16, r12
+   3e2e8:	1d 1d       	adc	r17, r13
+   3e2ea:	2e 1d       	adc	r18, r14
+   3e2ec:	3f 1d       	adc	r19, r15
+   3e2ee:	2b bf       	out	0x3b, r18	; 59
+   3e2f0:	f8 01       	movw	r30, r16
+   3e2f2:	07 91       	elpm	r16, Z+
+   3e2f4:	0d 93       	st	X+, r16
+   3e2f6:	4f 5f       	subi	r20, 0xFF	; 255
+   3e2f8:	5f 4f       	sbci	r21, 0xFF	; 255
+   3e2fa:	6f 4f       	sbci	r22, 0xFF	; 255
+   3e2fc:	7f 4f       	sbci	r23, 0xFF	; 255
+	boot_rww_enable ();		//Enable reading of main flash
+	while(boot_rww_busy());	//Wait till main flash section is ready for reading
+	uint32_t Page_Add = page*SPM_PAGESIZE; //get the first address of the selected page
+	
+	//read the page one byte at a time into the buffer
+	for (uint16_t i = 0; i < SPM_PAGESIZE; i++ )
+   3e2fe:	41 15       	cp	r20, r1
+   3e300:	81 e0       	ldi	r24, 0x01	; 1
+   3e302:	58 07       	cpc	r21, r24
+   3e304:	61 05       	cpc	r22, r1
+   3e306:	71 05       	cpc	r23, r1
+   3e308:	61 f7       	brne	.-40     	; 0x3e2e2 <boot_read_page+0x2a>
+	{
+		buf[i] = pgm_read_byte_far((Page_Add)+i);
+	}
+}
+   3e30a:	1f 91       	pop	r17
+   3e30c:	0f 91       	pop	r16
+   3e30e:	ff 90       	pop	r15
+   3e310:	ef 90       	pop	r14
+   3e312:	df 90       	pop	r13
+   3e314:	cf 90       	pop	r12
+   3e316:	08 95       	ret
+
+0003e318 <main>:
+
+int main(void)
+{
+   3e318:	cf 93       	push	r28
+   3e31a:	df 93       	push	r29
+   3e31c:	cd b7       	in	r28, 0x3d	; 61
+   3e31e:	de b7       	in	r29, 0x3e	; 62
+   3e320:	c7 50       	subi	r28, 0x07	; 7
+   3e322:	d1 40       	sbci	r29, 0x01	; 1
+   3e324:	0f b6       	in	r0, 0x3f	; 63
+   3e326:	f8 94       	cli
+   3e328:	de bf       	out	0x3e, r29	; 62
+   3e32a:	0f be       	out	0x3f, r0	; 63
+   3e32c:	cd bf       	out	0x3d, r28	; 61
+	//These first 3 macros must be called at startup,
+	//to ensure the MCU does not get stuck in a reset loop
+	
+	cli();				//Disable all interrupts
+   3e32e:	f8 94       	cli
+	MCUSR = 0;			//Clear the MCU Status Register, this removes any reset condition flag
+   3e330:	14 be       	out	0x34, r1	; 52
+	wdt_disable();		//Disable the watchdog timer
+   3e332:	88 e1       	ldi	r24, 0x18	; 24
+   3e334:	0f b6       	in	r0, 0x3f	; 63
+   3e336:	f8 94       	cli
+   3e338:	80 93 60 00 	sts	0x0060, r24
+   3e33c:	10 92 60 00 	sts	0x0060, r1
+   3e340:	0f be       	out	0x3f, r0	; 63
+	
+	
+	
+	DDRB |= 1<<7;		//Set PortB 7 as output, so we can flash the led connected, to show its in bootloader mode
+   3e342:	27 9a       	sbi	0x04, 7	; 4
+	
+	//these two writes to MCUCR must occur within 4 cycles
+	MCUCR = (1<<IVCE);	//Enable changing of interrupt vectors
+   3e344:	81 e0       	ldi	r24, 0x01	; 1
+   3e346:	85 bf       	out	0x35, r24	; 53
+	MCUCR = (1<<IVSEL); //Set interrupt vectors to use boot loader section
+   3e348:	82 e0       	ldi	r24, 0x02	; 2
+   3e34a:	85 bf       	out	0x35, r24	; 53
+	
+	//SD Card Chip Select is on PG5
+	DDRG |= (1<<PG5);				//Set PG5 as output
+   3e34c:	9d 9a       	sbi	0x13, 5	; 19
+	PORTG |= (1<<PG5);				//Set high to deselect SD card
+   3e34e:	a5 9a       	sbi	0x14, 5	; 20
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+   3e350:	2f ef       	ldi	r18, 0xFF	; 255
+   3e352:	33 ec       	ldi	r19, 0xC3	; 195
+   3e354:	89 e0       	ldi	r24, 0x09	; 9
+   3e356:	21 50       	subi	r18, 0x01	; 1
+   3e358:	30 40       	sbci	r19, 0x00	; 0
+   3e35a:	80 40       	sbci	r24, 0x00	; 0
+   3e35c:	e1 f7       	brne	.-8      	; 0x3e356 <main+0x3e>
+   3e35e:	00 c0       	rjmp	.+0      	; 0x3e360 <main+0x48>
+   3e360:	00 00       	nop
+	
+	_delay_ms(200);		//Need to give the Wiznet chip some time to startup after a cold boot
+	
+	//Read the IP Settings from EEPROM into sram
+	read_IP_EEPROM(gateway_ip,subnet_mask,mac_address,device_ip_address);
+   3e362:	20 e0       	ldi	r18, 0x00	; 0
+   3e364:	32 e0       	ldi	r19, 0x02	; 2
+   3e366:	44 e0       	ldi	r20, 0x04	; 4
+   3e368:	52 e0       	ldi	r21, 0x02	; 2
+   3e36a:	6a e0       	ldi	r22, 0x0A	; 10
+   3e36c:	72 e0       	ldi	r23, 0x02	; 2
+   3e36e:	8e e0       	ldi	r24, 0x0E	; 14
+   3e370:	92 e0       	ldi	r25, 0x02	; 2
+   3e372:	1d df       	rcall	.-454    	; 0x3e1ae <read_IP_EEPROM>
+	
+	//Setup the Wiznet Ethernet Chip
+	wiznet_init();
+   3e374:	59 d2       	rcall	.+1202   	; 0x3e828 <wiznet_init>
+	wiznet_set_config(gateway_ip,subnet_mask,mac_address,device_ip_address);
+   3e376:	20 e0       	ldi	r18, 0x00	; 0
+   3e378:	32 e0       	ldi	r19, 0x02	; 2
+   3e37a:	44 e0       	ldi	r20, 0x04	; 4
+   3e37c:	52 e0       	ldi	r21, 0x02	; 2
+   3e37e:	6a e0       	ldi	r22, 0x0A	; 10
+   3e380:	72 e0       	ldi	r23, 0x02	; 2
+   3e382:	8e e0       	ldi	r24, 0x0E	; 14
+   3e384:	92 e0       	ldi	r25, 0x02	; 2
+   3e386:	e8 d1       	rcall	.+976    	; 0x3e758 <wiznet_set_config>
+	wiznet_socket_listen(Sock_Offset,Listen_Port);	//Setup a TCP listener port
+   3e388:	6d ec       	ldi	r22, 0xCD	; 205
+   3e38a:	72 e3       	ldi	r23, 0x32	; 50
+   3e38c:	80 e0       	ldi	r24, 0x00	; 0
+   3e38e:	90 e0       	ldi	r25, 0x00	; 0
+   3e390:	8a d2       	rcall	.+1300   	; 0x3e8a6 <wiznet_socket_listen>
+	
+	Sec_Timeout = 10;	//Set the timeout value, when this expires, boot loader will jump to main code
+   3e392:	8a e0       	ldi	r24, 0x0A	; 10
+   3e394:	80 93 1a 02 	sts	0x021A, r24
+	
+	TCCR1A = 0x00;
+   3e398:	10 92 80 00 	sts	0x0080, r1
+	TCCR1B = (1<<WGM12) | (1<<CS12) | (0<<CS11) | (1<<CS10); // Set clk/1024 (15625Hz at 16MHz), and also clear timer on compare match(CTC)
+   3e39c:	8d e0       	ldi	r24, 0x0D	; 13
+   3e39e:	80 93 81 00 	sts	0x0081, r24
+	TCCR1C = 0x00;
+   3e3a2:	10 92 82 00 	sts	0x0082, r1
+	OCR1A = 15625;			//Set compare register to 15625 to give a 1Hz interrupt
+   3e3a6:	89 e0       	ldi	r24, 0x09	; 9
+   3e3a8:	9d e3       	ldi	r25, 0x3D	; 61
+   3e3aa:	90 93 89 00 	sts	0x0089, r25
+   3e3ae:	80 93 88 00 	sts	0x0088, r24
+	TIMSK1 = (1<<OCIE1A);	//enable output compare interrupt enable
+   3e3b2:	82 e0       	ldi	r24, 0x02	; 2
+   3e3b4:	80 93 6f 00 	sts	0x006F, r24
+		
+	sei(); //Global enable interrupts
+   3e3b8:	78 94       	sei
+	//buffer for ethernet communication
+	//same size as a page, allowing reading/writing one page at a time
+	uint8_t Buffer[SPM_PAGESIZE]; 
+	
+	uint32_t PageIndex = 0;	//current active page
+	uint32_t Pages = 0;		//total pages to verify/write
+   3e3ba:	81 2c       	mov	r8, r1
+   3e3bc:	91 2c       	mov	r9, r1
+   3e3be:	54 01       	movw	r10, r8
+	
+	//buffer for ethernet communication
+	//same size as a page, allowing reading/writing one page at a time
+	uint8_t Buffer[SPM_PAGESIZE]; 
+	
+	uint32_t PageIndex = 0;	//current active page
+   3e3c0:	c1 2c       	mov	r12, r1
+   3e3c2:	d1 2c       	mov	r13, r1
+   3e3c4:	76 01       	movw	r14, r12
+	TIMSK1 = (1<<OCIE1A);	//enable output compare interrupt enable
+		
+	sei(); //Global enable interrupts
+	
+	enum {WAIT_START, HEADER, PROGRAMMING, VERIFY, OK, END, IPSET} status;
+	status = WAIT_START;
+   3e3c6:	00 e0       	ldi	r16, 0x00	; 0
+	uint32_t Pages = 0;		//total pages to verify/write
+	
+    while(1)
+    {
+		
+		if(Sec_Timeout == 0)
+   3e3c8:	1a e0       	ldi	r17, 0x0A	; 10
+					OCR1A = 0x00;
+					TIMSK1 = 0x00;
+									
+					//Put interrupt vectors back in main flash land
+					//these two writes must occur within 4 cycles
+					MCUCR = (1<<IVCE);
+   3e3ca:	77 24       	eor	r7, r7
+   3e3cc:	73 94       	inc	r7
+					MCUCR = 0;
+									
+					// enable the main flash for use by the main application
+					boot_rww_enable ();
+   3e3ce:	71 e1       	ldi	r23, 0x11	; 17
+   3e3d0:	67 2e       	mov	r6, r23
+	uint32_t Pages = 0;		//total pages to verify/write
+	
+    while(1)
+    {
+		
+		if(Sec_Timeout == 0)
+   3e3d2:	80 91 1a 02 	lds	r24, 0x021A
+   3e3d6:	81 11       	cpse	r24, r1
+   3e3d8:	18 c0       	rjmp	.+48     	; 0x3e40a <main+0xf2>
+   3e3da:	8a e0       	ldi	r24, 0x0A	; 10
+			status = END;
+			
+			//Flash the LED fast to signal bootloader exit
+			for(uint8_t i = 0; i< 10; i++)
+			{
+				PORTB |= 1<<7;
+   3e3dc:	2f 9a       	sbi	0x05, 7	; 5
+   3e3de:	9f ef       	ldi	r25, 0xFF	; 255
+   3e3e0:	a1 ee       	ldi	r26, 0xE1	; 225
+   3e3e2:	b4 e0       	ldi	r27, 0x04	; 4
+   3e3e4:	91 50       	subi	r25, 0x01	; 1
+   3e3e6:	a0 40       	sbci	r26, 0x00	; 0
+   3e3e8:	b0 40       	sbci	r27, 0x00	; 0
+   3e3ea:	e1 f7       	brne	.-8      	; 0x3e3e4 <main+0xcc>
+   3e3ec:	00 c0       	rjmp	.+0      	; 0x3e3ee <main+0xd6>
+   3e3ee:	00 00       	nop
+				_delay_ms(100);
+				PORTB &= ~(1 << 7);
+   3e3f0:	2f 98       	cbi	0x05, 7	; 5
+   3e3f2:	2f ef       	ldi	r18, 0xFF	; 255
+   3e3f4:	31 ee       	ldi	r19, 0xE1	; 225
+   3e3f6:	94 e0       	ldi	r25, 0x04	; 4
+   3e3f8:	21 50       	subi	r18, 0x01	; 1
+   3e3fa:	30 40       	sbci	r19, 0x00	; 0
+   3e3fc:	90 40       	sbci	r25, 0x00	; 0
+   3e3fe:	e1 f7       	brne	.-8      	; 0x3e3f8 <main+0xe0>
+   3e400:	00 c0       	rjmp	.+0      	; 0x3e402 <main+0xea>
+   3e402:	00 00       	nop
+   3e404:	81 50       	subi	r24, 0x01	; 1
+			//if timeout exceeded then
+			//set case to END
+			status = END;
+			
+			//Flash the LED fast to signal bootloader exit
+			for(uint8_t i = 0; i< 10; i++)
+   3e406:	51 f7       	brne	.-44     	; 0x3e3dc <main+0xc4>
+		
+		if(Sec_Timeout == 0)
+		{
+			//if timeout exceeded then
+			//set case to END
+			status = END;
+   3e408:	05 e0       	ldi	r16, 0x05	; 5
+				PORTB &= ~(1 << 7);
+				_delay_ms(100);
+			}
+		}
+
+		unsigned short RX_Data = wiznet_Rx_size(Sock_Offset);	//Get the amount of data in the receive buffer
+   3e40a:	80 e0       	ldi	r24, 0x00	; 0
+   3e40c:	90 e0       	ldi	r25, 0x00	; 0
+   3e40e:	1b d2       	rcall	.+1078   	; 0x3e846 <wiznet_Rx_size>
+   3e410:	2c 01       	movw	r4, r24
+		unsigned short TX_Size = wiznet_Tx_size(Sock_Offset);	//Get the free space in the transmit buffer
+   3e412:	80 e0       	ldi	r24, 0x00	; 0
+   3e414:	90 e0       	ldi	r25, 0x00	; 0
+   3e416:	2f d2       	rcall	.+1118   	; 0x3e876 <wiznet_Tx_size>
+		
+		switch (status)
+   3e418:	40 2f       	mov	r20, r16
+   3e41a:	50 e0       	ldi	r21, 0x00	; 0
+   3e41c:	47 30       	cpi	r20, 0x07	; 7
+   3e41e:	51 05       	cpc	r21, r1
+   3e420:	c0 f6       	brcc	.-80     	; 0x3e3d2 <main+0xba>
+   3e422:	fa 01       	movw	r30, r20
+   3e424:	ee 58       	subi	r30, 0x8E	; 142
+   3e426:	ff 40       	sbci	r31, 0x0F	; 15
+   3e428:	40 c3       	rjmp	.+1664   	; 0x3eaaa <__tablejump2__>
+		{
+			case WAIT_START:
+			{
+				if(RX_Data >= 4)
+   3e42a:	a4 e0       	ldi	r26, 0x04	; 4
+   3e42c:	4a 16       	cp	r4, r26
+   3e42e:	51 04       	cpc	r5, r1
+   3e430:	80 f2       	brcs	.-96     	; 0x3e3d2 <main+0xba>
+				{
+					//Must receive a PROG command to start the process of writing a new application
+					wiznet_receive_tcp(Buffer,4,Sock_Offset);
+   3e432:	40 e0       	ldi	r20, 0x00	; 0
+   3e434:	50 e0       	ldi	r21, 0x00	; 0
+   3e436:	64 e0       	ldi	r22, 0x04	; 4
+   3e438:	70 e0       	ldi	r23, 0x00	; 0
+   3e43a:	ce 01       	movw	r24, r28
+   3e43c:	01 96       	adiw	r24, 0x01	; 1
+   3e43e:	cf d2       	rcall	.+1438   	; 0x3e9de <wiznet_receive_tcp>
+					if(Buffer[0] == 'P' && Buffer[1] == 'R' && Buffer[2] == 'O' && Buffer[3] == 'G')
+   3e440:	89 81       	ldd	r24, Y+1	; 0x01
+   3e442:	80 35       	cpi	r24, 0x50	; 80
+   3e444:	11 f5       	brne	.+68     	; 0x3e48a <main+0x172>
+   3e446:	8a 81       	ldd	r24, Y+2	; 0x02
+   3e448:	82 35       	cpi	r24, 0x52	; 82
+   3e44a:	09 f0       	breq	.+2      	; 0x3e44e <main+0x136>
+   3e44c:	c2 cf       	rjmp	.-124    	; 0x3e3d2 <main+0xba>
+   3e44e:	8b 81       	ldd	r24, Y+3	; 0x03
+   3e450:	8f 34       	cpi	r24, 0x4F	; 79
+   3e452:	09 f0       	breq	.+2      	; 0x3e456 <main+0x13e>
+   3e454:	be cf       	rjmp	.-132    	; 0x3e3d2 <main+0xba>
+   3e456:	8c 81       	ldd	r24, Y+4	; 0x04
+   3e458:	87 34       	cpi	r24, 0x47	; 71
+   3e45a:	09 f0       	breq	.+2      	; 0x3e45e <main+0x146>
+   3e45c:	ba cf       	rjmp	.-140    	; 0x3e3d2 <main+0xba>
+					{
+						unsigned char Version_Reply[] = "V1.0\r\n";			//send the version of the logger/bootloader
+   3e45e:	87 e0       	ldi	r24, 0x07	; 7
+   3e460:	e2 e1       	ldi	r30, 0x12	; 18
+   3e462:	f2 e0       	ldi	r31, 0x02	; 2
+   3e464:	de 01       	movw	r26, r28
+   3e466:	af 5f       	subi	r26, 0xFF	; 255
+   3e468:	be 4f       	sbci	r27, 0xFE	; 254
+   3e46a:	01 90       	ld	r0, Z+
+   3e46c:	0d 92       	st	X+, r0
+   3e46e:	8a 95       	dec	r24
+   3e470:	e1 f7       	brne	.-8      	; 0x3e46a <main+0x152>
+						wiznet_send_tcp(Version_Reply,6,Sock_Offset);		//5 bytes to include the null termination
+   3e472:	40 e0       	ldi	r20, 0x00	; 0
+   3e474:	50 e0       	ldi	r21, 0x00	; 0
+   3e476:	66 e0       	ldi	r22, 0x06	; 6
+   3e478:	70 e0       	ldi	r23, 0x00	; 0
+   3e47a:	ce 01       	movw	r24, r28
+   3e47c:	8f 5f       	subi	r24, 0xFF	; 255
+   3e47e:	9e 4f       	sbci	r25, 0xFE	; 254
+   3e480:	3c d2       	rcall	.+1144   	; 0x3e8fa <wiznet_send_tcp>
+						Sec_Timeout = 10;									//reset the timeout to 10 seconds
+   3e482:	10 93 1a 02 	sts	0x021A, r17
+						status = HEADER;
+   3e486:	01 e0       	ldi	r16, 0x01	; 1
+				if(RX_Data >= 4)
+				{
+					//Must receive a PROG command to start the process of writing a new application
+					wiznet_receive_tcp(Buffer,4,Sock_Offset);
+					if(Buffer[0] == 'P' && Buffer[1] == 'R' && Buffer[2] == 'O' && Buffer[3] == 'G')
+					{
+   3e488:	a4 cf       	rjmp	.-184    	; 0x3e3d2 <main+0xba>
+						unsigned char Version_Reply[] = "V1.0\r\n";			//send the version of the logger/bootloader
+						wiznet_send_tcp(Version_Reply,6,Sock_Offset);		//5 bytes to include the null termination
+						Sec_Timeout = 10;									//reset the timeout to 10 seconds
+						status = HEADER;
+					}
+					else if(Buffer[0] == 'I' && Buffer[1] == 'P' && Buffer[2] == 'S' && Buffer[3] == 'T')
+   3e48a:	89 34       	cpi	r24, 0x49	; 73
+   3e48c:	09 f0       	breq	.+2      	; 0x3e490 <main+0x178>
+   3e48e:	a1 cf       	rjmp	.-190    	; 0x3e3d2 <main+0xba>
+   3e490:	8a 81       	ldd	r24, Y+2	; 0x02
+   3e492:	80 35       	cpi	r24, 0x50	; 80
+   3e494:	09 f0       	breq	.+2      	; 0x3e498 <main+0x180>
+   3e496:	9d cf       	rjmp	.-198    	; 0x3e3d2 <main+0xba>
+   3e498:	8b 81       	ldd	r24, Y+3	; 0x03
+   3e49a:	83 35       	cpi	r24, 0x53	; 83
+   3e49c:	09 f0       	breq	.+2      	; 0x3e4a0 <main+0x188>
+   3e49e:	99 cf       	rjmp	.-206    	; 0x3e3d2 <main+0xba>
+   3e4a0:	8c 81       	ldd	r24, Y+4	; 0x04
+   3e4a2:	84 35       	cpi	r24, 0x54	; 84
+   3e4a4:	09 f0       	breq	.+2      	; 0x3e4a8 <main+0x190>
+   3e4a6:	95 cf       	rjmp	.-214    	; 0x3e3d2 <main+0xba>
+					{
+						unsigned char Version_Reply[] = "V1.0\r\n";			//send the version of the logger/bootloader
+   3e4a8:	87 e0       	ldi	r24, 0x07	; 7
+   3e4aa:	e2 e1       	ldi	r30, 0x12	; 18
+   3e4ac:	f2 e0       	ldi	r31, 0x02	; 2
+   3e4ae:	de 01       	movw	r26, r28
+   3e4b0:	af 5f       	subi	r26, 0xFF	; 255
+   3e4b2:	be 4f       	sbci	r27, 0xFE	; 254
+   3e4b4:	01 90       	ld	r0, Z+
+   3e4b6:	0d 92       	st	X+, r0
+   3e4b8:	8a 95       	dec	r24
+   3e4ba:	e1 f7       	brne	.-8      	; 0x3e4b4 <main+0x19c>
+						wiznet_send_tcp(Version_Reply,6,Sock_Offset);		//5 bytes to include the null termination
+   3e4bc:	40 e0       	ldi	r20, 0x00	; 0
+   3e4be:	50 e0       	ldi	r21, 0x00	; 0
+   3e4c0:	66 e0       	ldi	r22, 0x06	; 6
+   3e4c2:	70 e0       	ldi	r23, 0x00	; 0
+   3e4c4:	ce 01       	movw	r24, r28
+   3e4c6:	8f 5f       	subi	r24, 0xFF	; 255
+   3e4c8:	9e 4f       	sbci	r25, 0xFE	; 254
+   3e4ca:	17 d2       	rcall	.+1070   	; 0x3e8fa <wiznet_send_tcp>
+						Sec_Timeout = 10;									//reset the timeout to 10 seconds
+   3e4cc:	10 93 1a 02 	sts	0x021A, r17
+						status = IPSET;
+   3e4d0:	06 e0       	ldi	r16, 0x06	; 6
+   3e4d2:	7f cf       	rjmp	.-258    	; 0x3e3d2 <main+0xba>
+				}
+				break;
+			}
+			case IPSET: //update the TCP/IP settings
+			{
+				if(RX_Data >= 18) //wait for full TCP/IP settings packet
+   3e4d4:	b2 e1       	ldi	r27, 0x12	; 18
+   3e4d6:	4b 16       	cp	r4, r27
+   3e4d8:	51 04       	cpc	r5, r1
+   3e4da:	08 f4       	brcc	.+2      	; 0x3e4de <main+0x1c6>
+   3e4dc:	7a cf       	rjmp	.-268    	; 0x3e3d2 <main+0xba>
+				{
+					wiznet_receive_tcp(Buffer,18,Sock_Offset);
+   3e4de:	40 e0       	ldi	r20, 0x00	; 0
+   3e4e0:	50 e0       	ldi	r21, 0x00	; 0
+   3e4e2:	62 e1       	ldi	r22, 0x12	; 18
+   3e4e4:	70 e0       	ldi	r23, 0x00	; 0
+   3e4e6:	ce 01       	movw	r24, r28
+   3e4e8:	01 96       	adiw	r24, 0x01	; 1
+   3e4ea:	79 d2       	rcall	.+1266   	; 0x3e9de <wiznet_receive_tcp>
+   3e4ec:	fe 01       	movw	r30, r28
+   3e4ee:	39 96       	adiw	r30, 0x09	; 9
+   3e4f0:	44 e0       	ldi	r20, 0x04	; 4
+   3e4f2:	52 e0       	ldi	r21, 0x02	; 2
+   3e4f4:	9e 01       	movw	r18, r28
+   3e4f6:	21 5f       	subi	r18, 0xF1	; 241
+   3e4f8:	3f 4f       	sbci	r19, 0xFF	; 255
+   3e4fa:	29 01       	movw	r4, r18
+					//Packet[8-13] - MacAdd 6 bytes
+					//Packet[14-17] - DeviceIP 4 bytes
+					//----------------------
+								
+					//copy packet data into correct arrays
+					for (int i = 0; i< 6; i++)
+   3e4fc:	80 e0       	ldi	r24, 0x00	; 0
+   3e4fe:	90 e0       	ldi	r25, 0x00	; 0
+					{
+						if(i < 4)
+   3e500:	84 30       	cpi	r24, 0x04	; 4
+   3e502:	91 05       	cpc	r25, r1
+   3e504:	dc f4       	brge	.+54     	; 0x3e53c <main+0x224>
+   3e506:	9f 01       	movw	r18, r30
+   3e508:	28 50       	subi	r18, 0x08	; 8
+   3e50a:	31 09       	sbc	r19, r1
+						{
+							gateway_ip[i] = Buffer[i];
+   3e50c:	d9 01       	movw	r26, r18
+   3e50e:	6c 91       	ld	r22, X
+   3e510:	9c 01       	movw	r18, r24
+   3e512:	22 5f       	subi	r18, 0xF2	; 242
+   3e514:	3d 4f       	sbci	r19, 0xFD	; 253
+   3e516:	d9 01       	movw	r26, r18
+   3e518:	6c 93       	st	X, r22
+   3e51a:	9f 01       	movw	r18, r30
+   3e51c:	24 50       	subi	r18, 0x04	; 4
+   3e51e:	31 09       	sbc	r19, r1
+							subnet_mask[i] = Buffer[i+4];
+   3e520:	d9 01       	movw	r26, r18
+   3e522:	6c 91       	ld	r22, X
+   3e524:	9c 01       	movw	r18, r24
+   3e526:	26 5f       	subi	r18, 0xF6	; 246
+   3e528:	3d 4f       	sbci	r19, 0xFD	; 253
+   3e52a:	d9 01       	movw	r26, r18
+   3e52c:	6c 93       	st	X, r22
+							device_ip_address[i] = Buffer[i+14];
+   3e52e:	d2 01       	movw	r26, r4
+   3e530:	6c 91       	ld	r22, X
+   3e532:	9c 01       	movw	r18, r24
+   3e534:	20 50       	subi	r18, 0x00	; 0
+   3e536:	3e 4f       	sbci	r19, 0xFE	; 254
+   3e538:	d9 01       	movw	r26, r18
+   3e53a:	6c 93       	st	X, r22
+						}
+						mac_address[i] = Buffer[i+8];
+   3e53c:	21 91       	ld	r18, Z+
+   3e53e:	da 01       	movw	r26, r20
+   3e540:	2d 93       	st	X+, r18
+   3e542:	ad 01       	movw	r20, r26
+					//Packet[8-13] - MacAdd 6 bytes
+					//Packet[14-17] - DeviceIP 4 bytes
+					//----------------------
+								
+					//copy packet data into correct arrays
+					for (int i = 0; i< 6; i++)
+   3e544:	01 96       	adiw	r24, 0x01	; 1
+   3e546:	bf ef       	ldi	r27, 0xFF	; 255
+   3e548:	4b 1a       	sub	r4, r27
+   3e54a:	5b 0a       	sbc	r5, r27
+   3e54c:	86 30       	cpi	r24, 0x06	; 6
+   3e54e:	91 05       	cpc	r25, r1
+   3e550:	b9 f6       	brne	.-82     	; 0x3e500 <main+0x1e8>
+							device_ip_address[i] = Buffer[i+14];
+						}
+						mac_address[i] = Buffer[i+8];
+					}
+								
+					write_IP_EEPROM(gateway_ip,subnet_mask,mac_address,device_ip_address);
+   3e552:	20 e0       	ldi	r18, 0x00	; 0
+   3e554:	32 e0       	ldi	r19, 0x02	; 2
+   3e556:	44 e0       	ldi	r20, 0x04	; 4
+   3e558:	52 e0       	ldi	r21, 0x02	; 2
+   3e55a:	6a e0       	ldi	r22, 0x0A	; 10
+   3e55c:	72 e0       	ldi	r23, 0x02	; 2
+   3e55e:	8e e0       	ldi	r24, 0x0E	; 14
+   3e560:	92 e0       	ldi	r25, 0x02	; 2
+   3e562:	ff dd       	rcall	.-1026   	; 0x3e162 <write_IP_EEPROM>
+								
+					Sec_Timeout = 0; //set timeout to zero to restart the MCU and load new IP settings
+   3e564:	10 92 1a 02 	sts	0x021A, r1
+   3e568:	bb c0       	rjmp	.+374    	; 0x3e6e0 <main+0x3c8>
+				}
+				break;
+			}
+			case HEADER:
+			{
+				if(RX_Data >= 4)
+   3e56a:	24 e0       	ldi	r18, 0x04	; 4
+   3e56c:	42 16       	cp	r4, r18
+   3e56e:	51 04       	cpc	r5, r1
+   3e570:	08 f4       	brcc	.+2      	; 0x3e574 <main+0x25c>
+   3e572:	2f cf       	rjmp	.-418    	; 0x3e3d2 <main+0xba>
+				{
+					//the header is a 32bit value (4 bytes) that indicates the amount of pages to be written
+					wiznet_receive_tcp(Buffer,4,Sock_Offset);
+   3e574:	40 e0       	ldi	r20, 0x00	; 0
+   3e576:	50 e0       	ldi	r21, 0x00	; 0
+   3e578:	64 e0       	ldi	r22, 0x04	; 4
+   3e57a:	70 e0       	ldi	r23, 0x00	; 0
+   3e57c:	ce 01       	movw	r24, r28
+   3e57e:	01 96       	adiw	r24, 0x01	; 1
+   3e580:	2e d2       	rcall	.+1116   	; 0x3e9de <wiznet_receive_tcp>
+					Pages = (uint32_t)Buffer[0] + ((uint32_t)Buffer[1]<<8) + ((uint32_t)Buffer[2]<<16) + ((uint32_t)Buffer[3]<<24);
+   3e582:	8a 80       	ldd	r8, Y+2	; 0x02
+   3e584:	91 2c       	mov	r9, r1
+   3e586:	a1 2c       	mov	r10, r1
+   3e588:	b1 2c       	mov	r11, r1
+   3e58a:	ba 2c       	mov	r11, r10
+   3e58c:	a9 2c       	mov	r10, r9
+   3e58e:	98 2c       	mov	r9, r8
+   3e590:	88 24       	eor	r8, r8
+   3e592:	8b 81       	ldd	r24, Y+3	; 0x03
+   3e594:	90 e0       	ldi	r25, 0x00	; 0
+   3e596:	a0 e0       	ldi	r26, 0x00	; 0
+   3e598:	b0 e0       	ldi	r27, 0x00	; 0
+   3e59a:	dc 01       	movw	r26, r24
+   3e59c:	99 27       	eor	r25, r25
+   3e59e:	88 27       	eor	r24, r24
+   3e5a0:	88 0e       	add	r8, r24
+   3e5a2:	99 1e       	adc	r9, r25
+   3e5a4:	aa 1e       	adc	r10, r26
+   3e5a6:	bb 1e       	adc	r11, r27
+   3e5a8:	89 81       	ldd	r24, Y+1	; 0x01
+   3e5aa:	88 0e       	add	r8, r24
+   3e5ac:	91 1c       	adc	r9, r1
+   3e5ae:	a1 1c       	adc	r10, r1
+   3e5b0:	b1 1c       	adc	r11, r1
+   3e5b2:	8c 81       	ldd	r24, Y+4	; 0x04
+   3e5b4:	90 e0       	ldi	r25, 0x00	; 0
+   3e5b6:	a0 e0       	ldi	r26, 0x00	; 0
+   3e5b8:	b0 e0       	ldi	r27, 0x00	; 0
+   3e5ba:	b8 2f       	mov	r27, r24
+   3e5bc:	aa 27       	eor	r26, r26
+   3e5be:	99 27       	eor	r25, r25
+   3e5c0:	88 27       	eor	r24, r24
+   3e5c2:	88 0e       	add	r8, r24
+   3e5c4:	99 1e       	adc	r9, r25
+   3e5c6:	aa 1e       	adc	r10, r26
+   3e5c8:	bb 1e       	adc	r11, r27
+					
+					//clear the programmed status, as the program can no longer be guaranteed to be OK
+					eeprom_write_byte(&Programmed,0x00); 
+   3e5ca:	60 e0       	ldi	r22, 0x00	; 0
+   3e5cc:	82 e1       	ldi	r24, 0x12	; 18
+   3e5ce:	90 e0       	ldi	r25, 0x00	; 0
+   3e5d0:	ab d2       	rcall	.+1366   	; 0x3eb28 <__eewr_byte_m2560>
+					Sec_Timeout = 10; //reset the timeout
+   3e5d2:	10 93 1a 02 	sts	0x021A, r17
+					status = PROGRAMMING;
+   3e5d6:	02 e0       	ldi	r16, 0x02	; 2
+   3e5d8:	fc ce       	rjmp	.-520    	; 0x3e3d2 <main+0xba>
+				break;
+			}
+			case PROGRAMMING:
+			{
+				//check there is a full page ready in the receive buffer
+				if(RX_Data >= SPM_PAGESIZE)
+   3e5da:	3f ef       	ldi	r19, 0xFF	; 255
+   3e5dc:	43 16       	cp	r4, r19
+   3e5de:	51 04       	cpc	r5, r1
+   3e5e0:	99 f0       	breq	.+38     	; 0x3e608 <main+0x2f0>
+   3e5e2:	90 f0       	brcs	.+36     	; 0x3e608 <main+0x2f0>
+				{
+					//write one page at a time and increment the page index
+					wiznet_receive_tcp(Buffer,SPM_PAGESIZE,Sock_Offset);
+   3e5e4:	40 e0       	ldi	r20, 0x00	; 0
+   3e5e6:	50 e0       	ldi	r21, 0x00	; 0
+   3e5e8:	60 e0       	ldi	r22, 0x00	; 0
+   3e5ea:	71 e0       	ldi	r23, 0x01	; 1
+   3e5ec:	ce 01       	movw	r24, r28
+   3e5ee:	01 96       	adiw	r24, 0x01	; 1
+   3e5f0:	f6 d1       	rcall	.+1004   	; 0x3e9de <wiznet_receive_tcp>
+					boot_program_page(PageIndex,Buffer);
+   3e5f2:	ae 01       	movw	r20, r28
+   3e5f4:	4f 5f       	subi	r20, 0xFF	; 255
+   3e5f6:	5f 4f       	sbci	r21, 0xFF	; 255
+   3e5f8:	c7 01       	movw	r24, r14
+   3e5fa:	b6 01       	movw	r22, r12
+   3e5fc:	fe dd       	rcall	.-1028   	; 0x3e1fa <boot_program_page>
+					PageIndex++;
+   3e5fe:	8f ef       	ldi	r24, 0xFF	; 255
+   3e600:	c8 1a       	sub	r12, r24
+   3e602:	d8 0a       	sbc	r13, r24
+   3e604:	e8 0a       	sbc	r14, r24
+   3e606:	f8 0a       	sbc	r15, r24
+				}
+				
+				if(PageIndex == Pages) 
+   3e608:	c8 14       	cp	r12, r8
+   3e60a:	d9 04       	cpc	r13, r9
+   3e60c:	ea 04       	cpc	r14, r10
+   3e60e:	fb 04       	cpc	r15, r11
+   3e610:	09 f0       	breq	.+2      	; 0x3e614 <main+0x2fc>
+   3e612:	df ce       	rjmp	.-578    	; 0x3e3d2 <main+0xba>
+				{
+					//when all pages have been written
+					PageIndex = 0;		//reset the index to be used in verifying
+					Sec_Timeout = 10;	//reset timer
+   3e614:	10 93 1a 02 	sts	0x021A, r17
+				}
+				
+				if(PageIndex == Pages) 
+				{
+					//when all pages have been written
+					PageIndex = 0;		//reset the index to be used in verifying
+   3e618:	c1 2c       	mov	r12, r1
+   3e61a:	d1 2c       	mov	r13, r1
+   3e61c:	76 01       	movw	r14, r12
+					Sec_Timeout = 10;	//reset timer
+					status = VERIFY;	//Go to verify case
+   3e61e:	03 e0       	ldi	r16, 0x03	; 3
+					break;
+   3e620:	d8 ce       	rjmp	.-592    	; 0x3e3d2 <main+0xba>
+				break;
+			}
+			case VERIFY:
+			{
+				//check there is enough room in the transmit buffer for a full page
+				if(TX_Size >= SPM_PAGESIZE)
+   3e622:	8f 3f       	cpi	r24, 0xFF	; 255
+   3e624:	91 05       	cpc	r25, r1
+   3e626:	b1 f0       	breq	.+44     	; 0x3e654 <main+0x33c>
+   3e628:	a8 f0       	brcs	.+42     	; 0x3e654 <main+0x33c>
+				{
+					//read a full page then transmit it over TCP
+					boot_read_page(PageIndex,Buffer);
+   3e62a:	ae 01       	movw	r20, r28
+   3e62c:	4f 5f       	subi	r20, 0xFF	; 255
+   3e62e:	5f 4f       	sbci	r21, 0xFF	; 255
+   3e630:	c7 01       	movw	r24, r14
+   3e632:	b6 01       	movw	r22, r12
+   3e634:	41 de       	rcall	.-894    	; 0x3e2b8 <boot_read_page>
+					int16_t bytes_written = wiznet_send_tcp(Buffer,SPM_PAGESIZE,Sock_Offset);
+   3e636:	40 e0       	ldi	r20, 0x00	; 0
+   3e638:	50 e0       	ldi	r21, 0x00	; 0
+   3e63a:	60 e0       	ldi	r22, 0x00	; 0
+   3e63c:	71 e0       	ldi	r23, 0x01	; 1
+   3e63e:	ce 01       	movw	r24, r28
+   3e640:	01 96       	adiw	r24, 0x01	; 1
+   3e642:	5b d1       	rcall	.+694    	; 0x3e8fa <wiznet_send_tcp>
+					if(bytes_written == 0)
+   3e644:	89 2b       	or	r24, r25
+   3e646:	09 f4       	brne	.+2      	; 0x3e64a <main+0x332>
+					{
+						//connection must have been lost
+						status = END;
+   3e648:	05 e0       	ldi	r16, 0x05	; 5
+					}
+					PageIndex++;
+   3e64a:	9f ef       	ldi	r25, 0xFF	; 255
+   3e64c:	c9 1a       	sub	r12, r25
+   3e64e:	d9 0a       	sbc	r13, r25
+   3e650:	e9 0a       	sbc	r14, r25
+   3e652:	f9 0a       	sbc	r15, r25
+				}
+
+				if(PageIndex == Pages)
+   3e654:	c8 14       	cp	r12, r8
+   3e656:	d9 04       	cpc	r13, r9
+   3e658:	ea 04       	cpc	r14, r10
+   3e65a:	fb 04       	cpc	r15, r11
+   3e65c:	09 f0       	breq	.+2      	; 0x3e660 <main+0x348>
+   3e65e:	b9 ce       	rjmp	.-654    	; 0x3e3d2 <main+0xba>
+				{
+					//wait for the OK message
+					Sec_Timeout = 10;	//reset timer
+   3e660:	10 93 1a 02 	sts	0x021A, r17
+					status = OK;
+   3e664:	04 e0       	ldi	r16, 0x04	; 4
+   3e666:	b5 ce       	rjmp	.-662    	; 0x3e3d2 <main+0xba>
+				}
+				break;
+			}
+			case OK:
+			{
+				if(TX_Size >= 2)
+   3e668:	02 97       	sbiw	r24, 0x02	; 2
+   3e66a:	08 f4       	brcc	.+2      	; 0x3e66e <main+0x356>
+   3e66c:	b2 ce       	rjmp	.-668    	; 0x3e3d2 <main+0xba>
+				{
+					wiznet_receive_tcp(Buffer,2,Sock_Offset);
+   3e66e:	40 e0       	ldi	r20, 0x00	; 0
+   3e670:	50 e0       	ldi	r21, 0x00	; 0
+   3e672:	62 e0       	ldi	r22, 0x02	; 2
+   3e674:	70 e0       	ldi	r23, 0x00	; 0
+   3e676:	ce 01       	movw	r24, r28
+   3e678:	01 96       	adiw	r24, 0x01	; 1
+   3e67a:	b1 d1       	rcall	.+866    	; 0x3e9de <wiznet_receive_tcp>
+					if(Buffer[0] == 'O' && Buffer[1] == 'K')
+   3e67c:	89 81       	ldd	r24, Y+1	; 0x01
+   3e67e:	8f 34       	cpi	r24, 0x4F	; 79
+   3e680:	09 f0       	breq	.+2      	; 0x3e684 <main+0x36c>
+   3e682:	a7 ce       	rjmp	.-690    	; 0x3e3d2 <main+0xba>
+   3e684:	8a 81       	ldd	r24, Y+2	; 0x02
+   3e686:	8b 34       	cpi	r24, 0x4B	; 75
+   3e688:	09 f0       	breq	.+2      	; 0x3e68c <main+0x374>
+   3e68a:	a3 ce       	rjmp	.-698    	; 0x3e3d2 <main+0xba>
+					{
+						eeprom_write_byte(&Programmed,0x01); //Program is OK, set Programmed byte
+   3e68c:	61 e0       	ldi	r22, 0x01	; 1
+   3e68e:	82 e1       	ldi	r24, 0x12	; 18
+   3e690:	90 e0       	ldi	r25, 0x00	; 0
+   3e692:	4a d2       	rcall	.+1172   	; 0x3eb28 <__eewr_byte_m2560>
+						Sec_Timeout = 10; //reset the timeout
+   3e694:	10 93 1a 02 	sts	0x021A, r17
+						status = END;
+   3e698:	05 e0       	ldi	r16, 0x05	; 5
+   3e69a:	9b ce       	rjmp	.-714    	; 0x3e3d2 <main+0xba>
+				}
+				break;
+			}
+			case END:
+			{
+				if(eeprom_read_byte(&Programmed))
+   3e69c:	82 e1       	ldi	r24, 0x12	; 18
+   3e69e:	90 e0       	ldi	r25, 0x00	; 0
+   3e6a0:	1a d2       	rcall	.+1076   	; 0x3ead6 <__eerd_byte_m2560>
+   3e6a2:	88 23       	and	r24, r24
+   3e6a4:	d9 f0       	breq	.+54     	; 0x3e6dc <main+0x3c4>
+				{
+					//Disable all interrupts
+					cli();
+   3e6a6:	f8 94       	cli
+									
+					//reset the ports
+					PORTB = 0x00;
+   3e6a8:	15 b8       	out	0x05, r1	; 5
+					DDRB = 0x00;
+   3e6aa:	14 b8       	out	0x04, r1	; 4
+					PORTG = 0x00;
+   3e6ac:	14 ba       	out	0x14, r1	; 20
+					DDRG = 0x00;
+   3e6ae:	13 ba       	out	0x13, r1	; 19
+									
+					//Reset SPI registers
+					SPCR = 0x00;
+   3e6b0:	1c bc       	out	0x2c, r1	; 44
+					SPSR = 0x00;
+   3e6b2:	1d bc       	out	0x2d, r1	; 45
+									
+					//reset Timer settings
+					TCCR1A = 0x00;
+   3e6b4:	10 92 80 00 	sts	0x0080, r1
+					TCCR1B = 0x00;
+   3e6b8:	10 92 81 00 	sts	0x0081, r1
+					TCCR1C = 0x00;
+   3e6bc:	10 92 82 00 	sts	0x0082, r1
+					OCR1A = 0x00;
+   3e6c0:	10 92 89 00 	sts	0x0089, r1
+   3e6c4:	10 92 88 00 	sts	0x0088, r1
+					TIMSK1 = 0x00;
+   3e6c8:	10 92 6f 00 	sts	0x006F, r1
+									
+					//Put interrupt vectors back in main flash land
+					//these two writes must occur within 4 cycles
+					MCUCR = (1<<IVCE);
+   3e6cc:	75 be       	out	0x35, r7	; 53
+					MCUCR = 0;
+   3e6ce:	15 be       	out	0x35, r1	; 53
+									
+					// enable the main flash for use by the main application
+					boot_rww_enable ();
+   3e6d0:	60 92 57 00 	sts	0x0057, r6
+   3e6d4:	e8 95       	spm
+					//if MCU is successfully programmed
+					//Jump to the application
+					asm("jmp 0000");
+   3e6d6:	0c 94 00 00 	jmp	0	; 0x0 <__heap_end>
+   3e6da:	7b ce       	rjmp	.-778    	; 0x3e3d2 <main+0xba>
+				{
+					//there was an error with programming
+					//don't try to run code
+					//wait for a new program to be uploaded
+					status = WAIT_START;
+					Sec_Timeout = 10;
+   3e6dc:	10 93 1a 02 	sts	0x021A, r17
+				else
+				{
+					//there was an error with programming
+					//don't try to run code
+					//wait for a new program to be uploaded
+					status = WAIT_START;
+   3e6e0:	00 e0       	ldi	r16, 0x00	; 0
+					Sec_Timeout = 10;
+					break;
+   3e6e2:	77 ce       	rjmp	.-786    	; 0x3e3d2 <main+0xba>
+
+0003e6e4 <exchange_SPI>:
+{
+	//hardware specific function, private function that is not in the header file
+	//sends a byte then waits for transmission, then reads a byte
+	
+	unsigned char recv_data;
+	SPDR = send_data;			//Put data in SPI Data Register
+   3e6e4:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & (1<<SPIF))); //wait for transmission to finish
+   3e6e6:	0d b4       	in	r0, 0x2d	; 45
+   3e6e8:	07 fe       	sbrs	r0, 7
+   3e6ea:	fd cf       	rjmp	.-6      	; 0x3e6e6 <exchange_SPI+0x2>
+	recv_data = SPDR;			//Retrieve the reply data from data register
+   3e6ec:	8e b5       	in	r24, 0x2e	; 46
+	return recv_data;
+}
+   3e6ee:	08 95       	ret
+
+0003e6f0 <wiznet_read_address>:
+
+unsigned char wiznet_read_address(unsigned short address)
+{
+   3e6f0:	1f 93       	push	r17
+   3e6f2:	cf 93       	push	r28
+   3e6f4:	df 93       	push	r29
+   3e6f6:	1f 92       	push	r1
+   3e6f8:	cd b7       	in	r28, 0x3d	; 61
+   3e6fa:	de b7       	in	r29, 0x3e	; 62
+   3e6fc:	18 2f       	mov	r17, r24
+	//Private function that is not exposed in header
+	//reads a byte from a 16bit register on the W5100 ethernet chip
+	
+	unsigned char data;
+	PORTB &= ~(1<<PB4);						//Chip select
+   3e6fe:	2c 98       	cbi	0x05, 4	; 5
+	exchange_SPI(0x0F);						//read address command
+   3e700:	8f e0       	ldi	r24, 0x0F	; 15
+   3e702:	99 83       	std	Y+1, r25	; 0x01
+   3e704:	ef df       	rcall	.-34     	; 0x3e6e4 <exchange_SPI>
+	
+	exchange_SPI((address & 0xFF00) >> 8);  //send 16bit address
+   3e706:	99 81       	ldd	r25, Y+1	; 0x01
+   3e708:	89 2f       	mov	r24, r25
+   3e70a:	ec df       	rcall	.-40     	; 0x3e6e4 <exchange_SPI>
+	exchange_SPI((address & 0x00FF));		//only dummy data is returned, which can be ignored
+   3e70c:	81 2f       	mov	r24, r17
+   3e70e:	ea df       	rcall	.-44     	; 0x3e6e4 <exchange_SPI>
+	
+	data = exchange_SPI(0x00);				//read the byte, 0x00 is dummy data to drive the SPI clock
+   3e710:	80 e0       	ldi	r24, 0x00	; 0
+   3e712:	e8 df       	rcall	.-48     	; 0x3e6e4 <exchange_SPI>
+	
+	PORTB |= (1<<PB4);						//Chip deselect
+   3e714:	2c 9a       	sbi	0x05, 4	; 5
+	
+	return data;
+}
+   3e716:	0f 90       	pop	r0
+   3e718:	df 91       	pop	r29
+   3e71a:	cf 91       	pop	r28
+   3e71c:	1f 91       	pop	r17
+   3e71e:	08 95       	ret
+
+0003e720 <wiznet_write_address>:
+
+void wiznet_write_address(unsigned short address,unsigned char data )
+{
+   3e720:	1f 93       	push	r17
+   3e722:	cf 93       	push	r28
+   3e724:	df 93       	push	r29
+   3e726:	1f 92       	push	r1
+   3e728:	1f 92       	push	r1
+   3e72a:	cd b7       	in	r28, 0x3d	; 61
+   3e72c:	de b7       	in	r29, 0x3e	; 62
+   3e72e:	18 2f       	mov	r17, r24
+	//Private function that is not exposed in header
+	//write a byte to a 16bit register on the W5100 ethernet chip
+	
+	PORTB &= ~(1<<PB4);						//Chip select
+   3e730:	2c 98       	cbi	0x05, 4	; 5
+	
+	exchange_SPI(0xF0);						//write address command
+   3e732:	80 ef       	ldi	r24, 0xF0	; 240
+   3e734:	6a 83       	std	Y+2, r22	; 0x02
+   3e736:	99 83       	std	Y+1, r25	; 0x01
+   3e738:	d5 df       	rcall	.-86     	; 0x3e6e4 <exchange_SPI>
+	
+	exchange_SPI((address & 0xFF00) >> 8);	//send 16bit address
+   3e73a:	99 81       	ldd	r25, Y+1	; 0x01
+   3e73c:	89 2f       	mov	r24, r25
+   3e73e:	d2 df       	rcall	.-92     	; 0x3e6e4 <exchange_SPI>
+	exchange_SPI((address & 0x00FF));
+   3e740:	81 2f       	mov	r24, r17
+   3e742:	d0 df       	rcall	.-96     	; 0x3e6e4 <exchange_SPI>
+			
+	exchange_SPI(data);						//send data byte
+   3e744:	6a 81       	ldd	r22, Y+2	; 0x02
+   3e746:	86 2f       	mov	r24, r22
+   3e748:	cd df       	rcall	.-102    	; 0x3e6e4 <exchange_SPI>
+	
+	PORTB |= (1<<PB4);						//Chip deselect
+   3e74a:	2c 9a       	sbi	0x05, 4	; 5
+	
+	return;
+}
+   3e74c:	0f 90       	pop	r0
+   3e74e:	0f 90       	pop	r0
+   3e750:	df 91       	pop	r29
+   3e752:	cf 91       	pop	r28
+   3e754:	1f 91       	pop	r17
+   3e756:	08 95       	ret
+
+0003e758 <wiznet_set_config>:
+
+void wiznet_set_config(const unsigned char gateway_ip[4], const unsigned char subnet_mask[4],
+					   const unsigned char mac_address[6], const unsigned char device_ip_address[4])
+{
+   3e758:	cf 92       	push	r12
+   3e75a:	df 92       	push	r13
+   3e75c:	ef 92       	push	r14
+   3e75e:	ff 92       	push	r15
+   3e760:	0f 93       	push	r16
+   3e762:	1f 93       	push	r17
+   3e764:	cf 93       	push	r28
+   3e766:	df 93       	push	r29
+   3e768:	8c 01       	movw	r16, r24
+   3e76a:	6b 01       	movw	r12, r22
+   3e76c:	ea 01       	movw	r28, r20
+   3e76e:	79 01       	movw	r14, r18
+
+	wiznet_write_address(0x0001,gateway_ip[0]);
+   3e770:	fc 01       	movw	r30, r24
+   3e772:	60 81       	ld	r22, Z
+   3e774:	81 e0       	ldi	r24, 0x01	; 1
+   3e776:	90 e0       	ldi	r25, 0x00	; 0
+   3e778:	d3 df       	rcall	.-90     	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0002,gateway_ip[1]);
+   3e77a:	f8 01       	movw	r30, r16
+   3e77c:	61 81       	ldd	r22, Z+1	; 0x01
+   3e77e:	82 e0       	ldi	r24, 0x02	; 2
+   3e780:	90 e0       	ldi	r25, 0x00	; 0
+   3e782:	ce df       	rcall	.-100    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0003,gateway_ip[2]);
+   3e784:	f8 01       	movw	r30, r16
+   3e786:	62 81       	ldd	r22, Z+2	; 0x02
+   3e788:	83 e0       	ldi	r24, 0x03	; 3
+   3e78a:	90 e0       	ldi	r25, 0x00	; 0
+   3e78c:	c9 df       	rcall	.-110    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0004,gateway_ip[3]);
+   3e78e:	f8 01       	movw	r30, r16
+   3e790:	63 81       	ldd	r22, Z+3	; 0x03
+   3e792:	84 e0       	ldi	r24, 0x04	; 4
+   3e794:	90 e0       	ldi	r25, 0x00	; 0
+   3e796:	c4 df       	rcall	.-120    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x0005,subnet_mask[0]);
+   3e798:	f6 01       	movw	r30, r12
+   3e79a:	60 81       	ld	r22, Z
+   3e79c:	85 e0       	ldi	r24, 0x05	; 5
+   3e79e:	90 e0       	ldi	r25, 0x00	; 0
+   3e7a0:	bf df       	rcall	.-130    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0006,subnet_mask[1]);
+   3e7a2:	f6 01       	movw	r30, r12
+   3e7a4:	61 81       	ldd	r22, Z+1	; 0x01
+   3e7a6:	86 e0       	ldi	r24, 0x06	; 6
+   3e7a8:	90 e0       	ldi	r25, 0x00	; 0
+   3e7aa:	ba df       	rcall	.-140    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0007,subnet_mask[2]);
+   3e7ac:	f6 01       	movw	r30, r12
+   3e7ae:	62 81       	ldd	r22, Z+2	; 0x02
+   3e7b0:	87 e0       	ldi	r24, 0x07	; 7
+   3e7b2:	90 e0       	ldi	r25, 0x00	; 0
+   3e7b4:	b5 df       	rcall	.-150    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0008,subnet_mask[3]);
+   3e7b6:	f6 01       	movw	r30, r12
+   3e7b8:	63 81       	ldd	r22, Z+3	; 0x03
+   3e7ba:	88 e0       	ldi	r24, 0x08	; 8
+   3e7bc:	90 e0       	ldi	r25, 0x00	; 0
+   3e7be:	b0 df       	rcall	.-160    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x0009,mac_address[0]);
+   3e7c0:	68 81       	ld	r22, Y
+   3e7c2:	89 e0       	ldi	r24, 0x09	; 9
+   3e7c4:	90 e0       	ldi	r25, 0x00	; 0
+   3e7c6:	ac df       	rcall	.-168    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x000A,mac_address[1]);
+   3e7c8:	69 81       	ldd	r22, Y+1	; 0x01
+   3e7ca:	8a e0       	ldi	r24, 0x0A	; 10
+   3e7cc:	90 e0       	ldi	r25, 0x00	; 0
+   3e7ce:	a8 df       	rcall	.-176    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x000B,mac_address[2]);
+   3e7d0:	6a 81       	ldd	r22, Y+2	; 0x02
+   3e7d2:	8b e0       	ldi	r24, 0x0B	; 11
+   3e7d4:	90 e0       	ldi	r25, 0x00	; 0
+   3e7d6:	a4 df       	rcall	.-184    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x000C,mac_address[3]);
+   3e7d8:	6b 81       	ldd	r22, Y+3	; 0x03
+   3e7da:	8c e0       	ldi	r24, 0x0C	; 12
+   3e7dc:	90 e0       	ldi	r25, 0x00	; 0
+   3e7de:	a0 df       	rcall	.-192    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x000D,mac_address[4]);
+   3e7e0:	6c 81       	ldd	r22, Y+4	; 0x04
+   3e7e2:	8d e0       	ldi	r24, 0x0D	; 13
+   3e7e4:	90 e0       	ldi	r25, 0x00	; 0
+   3e7e6:	9c df       	rcall	.-200    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x000E,mac_address[5]);
+   3e7e8:	6d 81       	ldd	r22, Y+5	; 0x05
+   3e7ea:	8e e0       	ldi	r24, 0x0E	; 14
+   3e7ec:	90 e0       	ldi	r25, 0x00	; 0
+   3e7ee:	98 df       	rcall	.-208    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x000F,device_ip_address[0]);
+   3e7f0:	f7 01       	movw	r30, r14
+   3e7f2:	60 81       	ld	r22, Z
+   3e7f4:	8f e0       	ldi	r24, 0x0F	; 15
+   3e7f6:	90 e0       	ldi	r25, 0x00	; 0
+   3e7f8:	93 df       	rcall	.-218    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0010,device_ip_address[1]);
+   3e7fa:	f7 01       	movw	r30, r14
+   3e7fc:	61 81       	ldd	r22, Z+1	; 0x01
+   3e7fe:	80 e1       	ldi	r24, 0x10	; 16
+   3e800:	90 e0       	ldi	r25, 0x00	; 0
+   3e802:	8e df       	rcall	.-228    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0011,device_ip_address[2]);
+   3e804:	f7 01       	movw	r30, r14
+   3e806:	62 81       	ldd	r22, Z+2	; 0x02
+   3e808:	81 e1       	ldi	r24, 0x11	; 17
+   3e80a:	90 e0       	ldi	r25, 0x00	; 0
+   3e80c:	89 df       	rcall	.-238    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0012,device_ip_address[3]);
+   3e80e:	f7 01       	movw	r30, r14
+   3e810:	63 81       	ldd	r22, Z+3	; 0x03
+   3e812:	82 e1       	ldi	r24, 0x12	; 18
+   3e814:	90 e0       	ldi	r25, 0x00	; 0
+}
+   3e816:	df 91       	pop	r29
+   3e818:	cf 91       	pop	r28
+   3e81a:	1f 91       	pop	r17
+   3e81c:	0f 91       	pop	r16
+   3e81e:	ff 90       	pop	r15
+   3e820:	ef 90       	pop	r14
+   3e822:	df 90       	pop	r13
+   3e824:	cf 90       	pop	r12
+	wiznet_write_address(0x000E,mac_address[5]);
+	
+	wiznet_write_address(0x000F,device_ip_address[0]);
+	wiznet_write_address(0x0010,device_ip_address[1]);
+	wiznet_write_address(0x0011,device_ip_address[2]);
+	wiznet_write_address(0x0012,device_ip_address[3]);
+   3e826:	7c cf       	rjmp	.-264    	; 0x3e720 <wiznet_write_address>
+
+0003e828 <wiznet_init>:
+}
+
+void wiznet_init(void)
+{
+	//WizNet W5100 Ethernet Chip Select is on PB4
+	DDRB |= (1<<PB4);				//set PB4 as output
+   3e828:	24 9a       	sbi	0x04, 4	; 4
+	PORTB |= (1<<PB4);				//Deselect W5100
+   3e82a:	2c 9a       	sbi	0x05, 4	; 5
+	
+	//Setup SPI
+	DDRB |= (1<<PB0);				//SPI Chipselect, set to output	ensure SPI operates in Master Mode			
+   3e82c:	20 9a       	sbi	0x04, 0	; 4
+	DDRB |= (1<<PB1) | (1<<PB2);	//SPI CLK and MOSI, set as outputs
+   3e82e:	84 b1       	in	r24, 0x04	; 4
+   3e830:	86 60       	ori	r24, 0x06	; 6
+   3e832:	84 b9       	out	0x04, r24	; 4
+	DDRB &= ~(1<<PB3);				//MISO input
+   3e834:	23 98       	cbi	0x04, 3	; 4
+	
+	
+	//SPI Control Register
+	SPCR = (1<<SPE)|(1<<MSTR);		//Enable SPI and Set to Master Mode
+   3e836:	80 e5       	ldi	r24, 0x50	; 80
+   3e838:	8c bd       	out	0x2c, r24	; 44
+									// CPOL and CPHA are 0, Speed set to OSC/4 (OSC/2 when SPI2X enabled), No interrupts enabled
+									
+	//SPI Status Register								
+	SPSR = (1<<SPI2X);				//Set SPI Double Speed, making speed OSC/2 (8MHz, using 16MHz external clock) 					
+   3e83a:	81 e0       	ldi	r24, 0x01	; 1
+   3e83c:	8d bd       	out	0x2d, r24	; 45
+	
+	
+	wiznet_write_address(0x0000,0x80); //Write Reset CMD to Wiznet CMD register
+   3e83e:	60 e8       	ldi	r22, 0x80	; 128
+   3e840:	80 e0       	ldi	r24, 0x00	; 0
+   3e842:	90 e0       	ldi	r25, 0x00	; 0
+   3e844:	6d cf       	rjmp	.-294    	; 0x3e720 <wiznet_write_address>
+
+0003e846 <wiznet_Rx_size>:
+}
+
+
+
+unsigned short wiznet_Rx_size(unsigned short Socket_offset)
+{
+   3e846:	1f 93       	push	r17
+   3e848:	cf 93       	push	r28
+   3e84a:	df 93       	push	r29
+   3e84c:	ec 01       	movw	r28, r24
+	//read size of data in receive buffer, which is stored in 2 bytes,
+	//making a 16bit unsigned value
+	unsigned char msb = wiznet_read_address(0x0426+Socket_offset);
+   3e84e:	8a 5d       	subi	r24, 0xDA	; 218
+   3e850:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e852:	4e df       	rcall	.-356    	; 0x3e6f0 <wiznet_read_address>
+   3e854:	18 2f       	mov	r17, r24
+	unsigned char lsb = wiznet_read_address(0x0427+Socket_offset);
+   3e856:	ce 01       	movw	r24, r28
+   3e858:	89 5d       	subi	r24, 0xD9	; 217
+   3e85a:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e85c:	49 df       	rcall	.-366    	; 0x3e6f0 <wiznet_read_address>
+	unsigned short rx_size = ((msb & 0x00ff)<<8) + lsb; 
+   3e85e:	21 2f       	mov	r18, r17
+   3e860:	30 e0       	ldi	r19, 0x00	; 0
+   3e862:	32 2f       	mov	r19, r18
+   3e864:	22 27       	eor	r18, r18
+	return rx_size;
+}
+   3e866:	a9 01       	movw	r20, r18
+   3e868:	48 0f       	add	r20, r24
+   3e86a:	51 1d       	adc	r21, r1
+   3e86c:	ca 01       	movw	r24, r20
+   3e86e:	df 91       	pop	r29
+   3e870:	cf 91       	pop	r28
+   3e872:	1f 91       	pop	r17
+   3e874:	08 95       	ret
+
+0003e876 <wiznet_Tx_size>:
+
+unsigned short wiznet_Tx_size(unsigned short offset)
+{
+   3e876:	1f 93       	push	r17
+   3e878:	cf 93       	push	r28
+   3e87a:	df 93       	push	r29
+   3e87c:	ec 01       	movw	r28, r24
+	//read size of available space in transmit buffer,
+	//which is stored in 2 bytes, making a 16bit unsigned value
+	unsigned char msb = wiznet_read_address(0x0420+offset);
+   3e87e:	80 5e       	subi	r24, 0xE0	; 224
+   3e880:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e882:	36 df       	rcall	.-404    	; 0x3e6f0 <wiznet_read_address>
+   3e884:	18 2f       	mov	r17, r24
+	unsigned char lsb = wiznet_read_address(0x0421+offset);
+   3e886:	ce 01       	movw	r24, r28
+   3e888:	8f 5d       	subi	r24, 0xDF	; 223
+   3e88a:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e88c:	31 df       	rcall	.-414    	; 0x3e6f0 <wiznet_read_address>
+	unsigned short tx_buffer = ((msb & 0x00ff)<<8) + lsb;
+   3e88e:	21 2f       	mov	r18, r17
+   3e890:	30 e0       	ldi	r19, 0x00	; 0
+   3e892:	32 2f       	mov	r19, r18
+   3e894:	22 27       	eor	r18, r18
+	return tx_buffer;
+}
+   3e896:	a9 01       	movw	r20, r18
+   3e898:	48 0f       	add	r20, r24
+   3e89a:	51 1d       	adc	r21, r1
+   3e89c:	ca 01       	movw	r24, r20
+   3e89e:	df 91       	pop	r29
+   3e8a0:	cf 91       	pop	r28
+   3e8a2:	1f 91       	pop	r17
+   3e8a4:	08 95       	ret
+
+0003e8a6 <wiznet_socket_listen>:
+
+void wiznet_socket_listen(unsigned short offset, unsigned short port)
+{
+   3e8a6:	ef 92       	push	r14
+   3e8a8:	ff 92       	push	r15
+   3e8aa:	0f 93       	push	r16
+   3e8ac:	1f 93       	push	r17
+   3e8ae:	cf 93       	push	r28
+   3e8b0:	df 93       	push	r29
+   3e8b2:	1f 92       	push	r1
+   3e8b4:	cd b7       	in	r28, 0x3d	; 61
+   3e8b6:	de b7       	in	r29, 0x3e	; 62
+   3e8b8:	7c 01       	movw	r14, r24
+   3e8ba:	16 2f       	mov	r17, r22
+	//split the 16bit unsigned short into 2 bytes
+	unsigned char source_port[2];
+	source_port[0] = (port >> 8) & 0xFF;
+	source_port[1] = port & 0xFF;
+
+	wiznet_write_address(0x0400+offset,0x01); //set socket to tcp mode
+   3e8bc:	61 e0       	ldi	r22, 0x01	; 1
+   3e8be:	9c 5f       	subi	r25, 0xFC	; 252
+   3e8c0:	79 83       	std	Y+1, r23	; 0x01
+   3e8c2:	2e df       	rcall	.-420    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x0404+offset,source_port[0]); //write the 2 bytes to the source port registers
+   3e8c4:	79 81       	ldd	r23, Y+1	; 0x01
+   3e8c6:	67 2f       	mov	r22, r23
+   3e8c8:	c7 01       	movw	r24, r14
+   3e8ca:	8c 5f       	subi	r24, 0xFC	; 252
+   3e8cc:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e8ce:	28 df       	rcall	.-432    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0405+offset,source_port[1]);
+   3e8d0:	61 2f       	mov	r22, r17
+   3e8d2:	c7 01       	movw	r24, r14
+   3e8d4:	8b 5f       	subi	r24, 0xFB	; 251
+   3e8d6:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e8d8:	23 df       	rcall	.-442    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x0401+offset,0x01); //open
+   3e8da:	87 01       	movw	r16, r14
+   3e8dc:	0f 5f       	subi	r16, 0xFF	; 255
+   3e8de:	1b 4f       	sbci	r17, 0xFB	; 251
+   3e8e0:	61 e0       	ldi	r22, 0x01	; 1
+   3e8e2:	c8 01       	movw	r24, r16
+   3e8e4:	1d df       	rcall	.-454    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0401+offset,0x02); //Listen
+   3e8e6:	62 e0       	ldi	r22, 0x02	; 2
+   3e8e8:	c8 01       	movw	r24, r16
+	
+}
+   3e8ea:	0f 90       	pop	r0
+   3e8ec:	df 91       	pop	r29
+   3e8ee:	cf 91       	pop	r28
+   3e8f0:	1f 91       	pop	r17
+   3e8f2:	0f 91       	pop	r16
+   3e8f4:	ff 90       	pop	r15
+   3e8f6:	ef 90       	pop	r14
+	
+	wiznet_write_address(0x0404+offset,source_port[0]); //write the 2 bytes to the source port registers
+	wiznet_write_address(0x0405+offset,source_port[1]);
+	
+	wiznet_write_address(0x0401+offset,0x01); //open
+	wiznet_write_address(0x0401+offset,0x02); //Listen
+   3e8f8:	13 cf       	rjmp	.-474    	; 0x3e720 <wiznet_write_address>
+
+0003e8fa <wiznet_send_tcp>:
+	
+}
+
+
+unsigned short wiznet_send_tcp(unsigned char* data, unsigned short data_size,unsigned short socket)
+{
+   3e8fa:	2f 92       	push	r2
+   3e8fc:	3f 92       	push	r3
+   3e8fe:	4f 92       	push	r4
+   3e900:	5f 92       	push	r5
+   3e902:	6f 92       	push	r6
+   3e904:	7f 92       	push	r7
+   3e906:	8f 92       	push	r8
+   3e908:	9f 92       	push	r9
+   3e90a:	af 92       	push	r10
+   3e90c:	bf 92       	push	r11
+   3e90e:	cf 92       	push	r12
+   3e910:	df 92       	push	r13
+   3e912:	ef 92       	push	r14
+   3e914:	ff 92       	push	r15
+   3e916:	0f 93       	push	r16
+   3e918:	1f 93       	push	r17
+   3e91a:	cf 93       	push	r28
+   3e91c:	df 93       	push	r29
+   3e91e:	6c 01       	movw	r12, r24
+   3e920:	eb 01       	movw	r28, r22
+   3e922:	8a 01       	movw	r16, r20
+	//returns the amount of bytes written to the W5100 chip
+	
+	
+	//read the socket status register to check the status of the connection
+	unsigned char sock_status = wiznet_read_address(0x0403+socket);
+   3e924:	ca 01       	movw	r24, r20
+   3e926:	8d 5f       	subi	r24, 0xFD	; 253
+   3e928:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e92a:	e2 de       	rcall	.-572    	; 0x3e6f0 <wiznet_read_address>
+	
+	if(sock_status != 23) //if socket is not open
+   3e92c:	87 31       	cpi	r24, 0x17	; 23
+   3e92e:	09 f0       	breq	.+2      	; 0x3e932 <wiznet_send_tcp+0x38>
+   3e930:	41 c0       	rjmp	.+130    	; 0x3e9b4 <wiznet_send_tcp+0xba>
+	{
+		//0 bytes written, cannot send data if there is no active connection
+		return 0;
+	}
+	
+	unsigned char msb = wiznet_read_address(0x0424+socket);
+   3e932:	48 01       	movw	r8, r16
+   3e934:	8c ed       	ldi	r24, 0xDC	; 220
+   3e936:	88 1a       	sub	r8, r24
+   3e938:	8b ef       	ldi	r24, 0xFB	; 251
+   3e93a:	98 0a       	sbc	r9, r24
+   3e93c:	c4 01       	movw	r24, r8
+   3e93e:	d8 de       	rcall	.-592    	; 0x3e6f0 <wiznet_read_address>
+   3e940:	e8 2e       	mov	r14, r24
+	unsigned char lsb = wiznet_read_address(0x0425+socket);
+   3e942:	58 01       	movw	r10, r16
+   3e944:	eb ed       	ldi	r30, 0xDB	; 219
+   3e946:	ae 1a       	sub	r10, r30
+   3e948:	eb ef       	ldi	r30, 0xFB	; 251
+   3e94a:	be 0a       	sbc	r11, r30
+   3e94c:	c5 01       	movw	r24, r10
+   3e94e:	d0 de       	rcall	.-608    	; 0x3e6f0 <wiznet_read_address>
+	unsigned short tx_wr_pt = ((msb & 0x00ff)<<8) + lsb; //find the location of the write pointer
+   3e950:	f1 2c       	mov	r15, r1
+   3e952:	fe 2c       	mov	r15, r14
+   3e954:	ee 24       	eor	r14, r14
+   3e956:	e8 0e       	add	r14, r24
+   3e958:	f1 1c       	adc	r15, r1
+		//write the data, the real address is calculated from the relative write pointer
+		//0x4000 is the offset for the transmit buffers, and 0x07FF is the buffer size
+		//and the relative address with buffer size to cause writing to the buffer to wrap around
+		//if it exceeds the buffer size
+		unsigned short RelativeAddr = (tx_wr_pt+i) & 0x07FF; 
+		unsigned short SocketOffset = socket*8; //correct the offset for the selected socket
+   3e95a:	38 01       	movw	r6, r16
+   3e95c:	63 e0       	ldi	r22, 0x03	; 3
+   3e95e:	66 0c       	add	r6, r6
+   3e960:	77 1c       	adc	r7, r7
+   3e962:	6a 95       	dec	r22
+   3e964:	e1 f7       	brne	.-8      	; 0x3e95e <wiznet_send_tcp+0x64>
+		unsigned short realaddr = 0x4000 + SocketOffset + RelativeAddr; //base + socket + relative buffer address
+   3e966:	f0 ec       	ldi	r31, 0xC0	; 192
+   3e968:	7f 1a       	sub	r7, r31
+   3e96a:	16 01       	movw	r2, r12
+   3e96c:	2c 0e       	add	r2, r28
+   3e96e:	3d 1e       	adc	r3, r29
+   3e970:	27 01       	movw	r4, r14
+   3e972:	4c 18       	sub	r4, r12
+   3e974:	5d 08       	sbc	r5, r13
+	
+	unsigned char msb = wiznet_read_address(0x0424+socket);
+	unsigned char lsb = wiznet_read_address(0x0425+socket);
+	unsigned short tx_wr_pt = ((msb & 0x00ff)<<8) + lsb; //find the location of the write pointer
+	
+	for(unsigned short i = 0 ; i< data_size;i++)
+   3e976:	c2 14       	cp	r12, r2
+   3e978:	d3 04       	cpc	r13, r3
+   3e97a:	59 f0       	breq	.+22     	; 0x3e992 <wiznet_send_tcp+0x98>
+   3e97c:	c2 01       	movw	r24, r4
+   3e97e:	8c 0d       	add	r24, r12
+   3e980:	9d 1d       	adc	r25, r13
+	{
+		//write the data, the real address is calculated from the relative write pointer
+		//0x4000 is the offset for the transmit buffers, and 0x07FF is the buffer size
+		//and the relative address with buffer size to cause writing to the buffer to wrap around
+		//if it exceeds the buffer size
+		unsigned short RelativeAddr = (tx_wr_pt+i) & 0x07FF; 
+   3e982:	97 70       	andi	r25, 0x07	; 7
+		unsigned short SocketOffset = socket*8; //correct the offset for the selected socket
+		unsigned short realaddr = 0x4000 + SocketOffset + RelativeAddr; //base + socket + relative buffer address
+		wiznet_write_address(realaddr,data[i]);
+   3e984:	f6 01       	movw	r30, r12
+   3e986:	61 91       	ld	r22, Z+
+   3e988:	6f 01       	movw	r12, r30
+   3e98a:	86 0d       	add	r24, r6
+   3e98c:	97 1d       	adc	r25, r7
+   3e98e:	c8 de       	rcall	.-624    	; 0x3e720 <wiznet_write_address>
+   3e990:	f2 cf       	rjmp	.-28     	; 0x3e976 <wiznet_send_tcp+0x7c>
+	}
+	wiznet_write_address(0x0424+socket,((tx_wr_pt+data_size) & 0xFF00)>>8);
+   3e992:	c7 01       	movw	r24, r14
+   3e994:	8c 0f       	add	r24, r28
+   3e996:	9d 1f       	adc	r25, r29
+   3e998:	69 2f       	mov	r22, r25
+   3e99a:	c4 01       	movw	r24, r8
+   3e99c:	c1 de       	rcall	.-638    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0425+socket,(tx_wr_pt+data_size) & 0x00FF);
+   3e99e:	6c 2f       	mov	r22, r28
+   3e9a0:	6e 0d       	add	r22, r14
+   3e9a2:	c5 01       	movw	r24, r10
+   3e9a4:	bd de       	rcall	.-646    	; 0x3e720 <wiznet_write_address>
+	
+	wiznet_write_address(0x0401+socket,0x20); //Write CMD to transmit the data in the buffer and update the write pointer
+   3e9a6:	60 e2       	ldi	r22, 0x20	; 32
+   3e9a8:	c8 01       	movw	r24, r16
+   3e9aa:	8f 5f       	subi	r24, 0xFF	; 255
+   3e9ac:	9b 4f       	sbci	r25, 0xFB	; 251
+   3e9ae:	b8 de       	rcall	.-656    	; 0x3e720 <wiznet_write_address>
+	
+	return data_size;
+   3e9b0:	ce 01       	movw	r24, r28
+   3e9b2:	02 c0       	rjmp	.+4      	; 0x3e9b8 <wiznet_send_tcp+0xbe>
+	unsigned char sock_status = wiznet_read_address(0x0403+socket);
+	
+	if(sock_status != 23) //if socket is not open
+	{
+		//0 bytes written, cannot send data if there is no active connection
+		return 0;
+   3e9b4:	80 e0       	ldi	r24, 0x00	; 0
+   3e9b6:	90 e0       	ldi	r25, 0x00	; 0
+	wiznet_write_address(0x0425+socket,(tx_wr_pt+data_size) & 0x00FF);
+	
+	wiznet_write_address(0x0401+socket,0x20); //Write CMD to transmit the data in the buffer and update the write pointer
+	
+	return data_size;
+}
+   3e9b8:	df 91       	pop	r29
+   3e9ba:	cf 91       	pop	r28
+   3e9bc:	1f 91       	pop	r17
+   3e9be:	0f 91       	pop	r16
+   3e9c0:	ff 90       	pop	r15
+   3e9c2:	ef 90       	pop	r14
+   3e9c4:	df 90       	pop	r13
+   3e9c6:	cf 90       	pop	r12
+   3e9c8:	bf 90       	pop	r11
+   3e9ca:	af 90       	pop	r10
+   3e9cc:	9f 90       	pop	r9
+   3e9ce:	8f 90       	pop	r8
+   3e9d0:	7f 90       	pop	r7
+   3e9d2:	6f 90       	pop	r6
+   3e9d4:	5f 90       	pop	r5
+   3e9d6:	4f 90       	pop	r4
+   3e9d8:	3f 90       	pop	r3
+   3e9da:	2f 90       	pop	r2
+   3e9dc:	08 95       	ret
+
+0003e9de <wiznet_receive_tcp>:
+
+void wiznet_receive_tcp(unsigned char *buffer, unsigned short read_amount, unsigned short Socket)
+{
+   3e9de:	2f 92       	push	r2
+   3e9e0:	3f 92       	push	r3
+   3e9e2:	4f 92       	push	r4
+   3e9e4:	5f 92       	push	r5
+   3e9e6:	6f 92       	push	r6
+   3e9e8:	7f 92       	push	r7
+   3e9ea:	8f 92       	push	r8
+   3e9ec:	9f 92       	push	r9
+   3e9ee:	af 92       	push	r10
+   3e9f0:	bf 92       	push	r11
+   3e9f2:	cf 92       	push	r12
+   3e9f4:	df 92       	push	r13
+   3e9f6:	ef 92       	push	r14
+   3e9f8:	ff 92       	push	r15
+   3e9fa:	0f 93       	push	r16
+   3e9fc:	1f 93       	push	r17
+   3e9fe:	cf 93       	push	r28
+   3ea00:	df 93       	push	r29
+   3ea02:	2c 01       	movw	r4, r24
+   3ea04:	7b 01       	movw	r14, r22
+   3ea06:	8a 01       	movw	r16, r20
+	//the Socket_offset variable is used to select which TCP socket is read
+
+	//get address of receive buffer read pointer
+	unsigned char msb = wiznet_read_address(0x0428+Socket);
+   3ea08:	5a 01       	movw	r10, r20
+   3ea0a:	88 ed       	ldi	r24, 0xD8	; 216
+   3ea0c:	a8 1a       	sub	r10, r24
+   3ea0e:	8b ef       	ldi	r24, 0xFB	; 251
+   3ea10:	b8 0a       	sbc	r11, r24
+   3ea12:	c5 01       	movw	r24, r10
+   3ea14:	6d de       	rcall	.-806    	; 0x3e6f0 <wiznet_read_address>
+   3ea16:	c8 2f       	mov	r28, r24
+	unsigned char lsb = wiznet_read_address(0x0429+Socket);
+   3ea18:	68 01       	movw	r12, r16
+   3ea1a:	e7 ed       	ldi	r30, 0xD7	; 215
+   3ea1c:	ce 1a       	sub	r12, r30
+   3ea1e:	eb ef       	ldi	r30, 0xFB	; 251
+   3ea20:	de 0a       	sbc	r13, r30
+   3ea22:	c6 01       	movw	r24, r12
+   3ea24:	65 de       	rcall	.-822    	; 0x3e6f0 <wiznet_read_address>
+	unsigned short rx_re_pt = ((msb & 0x00ff)<<8) + lsb;			
+   3ea26:	d0 e0       	ldi	r29, 0x00	; 0
+   3ea28:	dc 2f       	mov	r29, r28
+   3ea2a:	cc 27       	eor	r28, r28
+   3ea2c:	c8 0f       	add	r28, r24
+   3ea2e:	d1 1d       	adc	r29, r1
+	for(int i = 0 ; i<read_amount;i++)
+	{
+		//calculate the read address in the W5100 chip as the pointer only give a relative address
+		// 0x6000 is the receive buffers offset, 0x07FF is the receive buffer size
+		unsigned short RelativeAddr = (rx_re_pt+i) & 0x07FF;
+		unsigned short SocketOffset = Socket*8;
+   3ea30:	48 01       	movw	r8, r16
+   3ea32:	e3 e0       	ldi	r30, 0x03	; 3
+   3ea34:	88 0c       	add	r8, r8
+   3ea36:	99 1c       	adc	r9, r9
+   3ea38:	ea 95       	dec	r30
+   3ea3a:	e1 f7       	brne	.-8      	; 0x3ea34 <wiznet_receive_tcp+0x56>
+		unsigned short realaddr = 0x6000 + SocketOffset + RelativeAddr;
+   3ea3c:	f0 ea       	ldi	r31, 0xA0	; 160
+   3ea3e:	9f 1a       	sub	r9, r31
+   3ea40:	12 01       	movw	r2, r4
+   3ea42:	2e 0c       	add	r2, r14
+   3ea44:	3f 1c       	adc	r3, r15
+   3ea46:	3e 01       	movw	r6, r28
+   3ea48:	64 18       	sub	r6, r4
+   3ea4a:	75 08       	sbc	r7, r5
+	//get address of receive buffer read pointer
+	unsigned char msb = wiznet_read_address(0x0428+Socket);
+	unsigned char lsb = wiznet_read_address(0x0429+Socket);
+	unsigned short rx_re_pt = ((msb & 0x00ff)<<8) + lsb;			
+	
+	for(int i = 0 ; i<read_amount;i++)
+   3ea4c:	42 14       	cp	r4, r2
+   3ea4e:	53 04       	cpc	r5, r3
+   3ea50:	59 f0       	breq	.+22     	; 0x3ea68 <wiznet_receive_tcp+0x8a>
+   3ea52:	c3 01       	movw	r24, r6
+   3ea54:	84 0d       	add	r24, r4
+   3ea56:	95 1d       	adc	r25, r5
+	{
+		//calculate the read address in the W5100 chip as the pointer only give a relative address
+		// 0x6000 is the receive buffers offset, 0x07FF is the receive buffer size
+		unsigned short RelativeAddr = (rx_re_pt+i) & 0x07FF;
+   3ea58:	97 70       	andi	r25, 0x07	; 7
+		unsigned short SocketOffset = Socket*8;
+		unsigned short realaddr = 0x6000 + SocketOffset + RelativeAddr;
+		
+		buffer[i] = wiznet_read_address(realaddr); //read byte into buffer and increment
+   3ea5a:	88 0d       	add	r24, r8
+   3ea5c:	99 1d       	adc	r25, r9
+   3ea5e:	48 de       	rcall	.-880    	; 0x3e6f0 <wiznet_read_address>
+   3ea60:	f2 01       	movw	r30, r4
+   3ea62:	81 93       	st	Z+, r24
+   3ea64:	2f 01       	movw	r4, r30
+   3ea66:	f2 cf       	rjmp	.-28     	; 0x3ea4c <wiznet_receive_tcp+0x6e>
+	}
+	
+	wiznet_write_address(0x0428+Socket,((rx_re_pt+read_amount) & 0xFF00)>>8);	//set new pointer address (high and low byte)
+   3ea68:	ce 01       	movw	r24, r28
+   3ea6a:	8e 0d       	add	r24, r14
+   3ea6c:	9f 1d       	adc	r25, r15
+   3ea6e:	69 2f       	mov	r22, r25
+   3ea70:	c5 01       	movw	r24, r10
+   3ea72:	56 de       	rcall	.-852    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0429+Socket,(rx_re_pt+read_amount) & 0x00FF);
+   3ea74:	6c 2f       	mov	r22, r28
+   3ea76:	6e 0d       	add	r22, r14
+   3ea78:	c6 01       	movw	r24, r12
+   3ea7a:	52 de       	rcall	.-860    	; 0x3e720 <wiznet_write_address>
+	wiznet_write_address(0x0401+Socket,0x40);									//send received data cmd, (updates the receive buffer pointer)
+   3ea7c:	60 e4       	ldi	r22, 0x40	; 64
+   3ea7e:	c8 01       	movw	r24, r16
+   3ea80:	8f 5f       	subi	r24, 0xFF	; 255
+   3ea82:	9b 4f       	sbci	r25, 0xFB	; 251
+}
+   3ea84:	df 91       	pop	r29
+   3ea86:	cf 91       	pop	r28
+   3ea88:	1f 91       	pop	r17
+   3ea8a:	0f 91       	pop	r16
+   3ea8c:	ff 90       	pop	r15
+   3ea8e:	ef 90       	pop	r14
+   3ea90:	df 90       	pop	r13
+   3ea92:	cf 90       	pop	r12
+   3ea94:	bf 90       	pop	r11
+   3ea96:	af 90       	pop	r10
+   3ea98:	9f 90       	pop	r9
+   3ea9a:	8f 90       	pop	r8
+   3ea9c:	7f 90       	pop	r7
+   3ea9e:	6f 90       	pop	r6
+   3eaa0:	5f 90       	pop	r5
+   3eaa2:	4f 90       	pop	r4
+   3eaa4:	3f 90       	pop	r3
+   3eaa6:	2f 90       	pop	r2
+		buffer[i] = wiznet_read_address(realaddr); //read byte into buffer and increment
+	}
+	
+	wiznet_write_address(0x0428+Socket,((rx_re_pt+read_amount) & 0xFF00)>>8);	//set new pointer address (high and low byte)
+	wiznet_write_address(0x0429+Socket,(rx_re_pt+read_amount) & 0x00FF);
+	wiznet_write_address(0x0401+Socket,0x40);									//send received data cmd, (updates the receive buffer pointer)
+   3eaa8:	3b ce       	rjmp	.-906    	; 0x3e720 <wiznet_write_address>
+
+0003eaaa <__tablejump2__>:
+   3eaaa:	ee 0f       	add	r30, r30
+   3eaac:	ff 1f       	adc	r31, r31
+
+0003eaae <__tablejump__>:
+   3eaae:	05 90       	lpm	r0, Z+
+   3eab0:	f4 91       	lpm	r31, Z
+   3eab2:	e0 2d       	mov	r30, r0
+   3eab4:	19 94       	eijmp
+
+0003eab6 <__eerd_block_m2560>:
+   3eab6:	dc 01       	movw	r26, r24
+   3eab8:	cb 01       	movw	r24, r22
+
+0003eaba <__eerd_blraw_m2560>:
+   3eaba:	fc 01       	movw	r30, r24
+   3eabc:	f9 99       	sbic	0x1f, 1	; 31
+   3eabe:	fe cf       	rjmp	.-4      	; 0x3eabc <__eerd_blraw_m2560+0x2>
+   3eac0:	06 c0       	rjmp	.+12     	; 0x3eace <__eerd_blraw_m2560+0x14>
+   3eac2:	f2 bd       	out	0x22, r31	; 34
+   3eac4:	e1 bd       	out	0x21, r30	; 33
+   3eac6:	f8 9a       	sbi	0x1f, 0	; 31
+   3eac8:	31 96       	adiw	r30, 0x01	; 1
+   3eaca:	00 b4       	in	r0, 0x20	; 32
+   3eacc:	0d 92       	st	X+, r0
+   3eace:	41 50       	subi	r20, 0x01	; 1
+   3ead0:	50 40       	sbci	r21, 0x00	; 0
+   3ead2:	b8 f7       	brcc	.-18     	; 0x3eac2 <__eerd_blraw_m2560+0x8>
+   3ead4:	08 95       	ret
+
+0003ead6 <__eerd_byte_m2560>:
+   3ead6:	f9 99       	sbic	0x1f, 1	; 31
+   3ead8:	fe cf       	rjmp	.-4      	; 0x3ead6 <__eerd_byte_m2560>
+   3eada:	92 bd       	out	0x22, r25	; 34
+   3eadc:	81 bd       	out	0x21, r24	; 33
+   3eade:	f8 9a       	sbi	0x1f, 0	; 31
+   3eae0:	99 27       	eor	r25, r25
+   3eae2:	80 b5       	in	r24, 0x20	; 32
+   3eae4:	08 95       	ret
+
+0003eae6 <__eeupd_block_m2560>:
+   3eae6:	dc 01       	movw	r26, r24
+   3eae8:	a4 0f       	add	r26, r20
+   3eaea:	b5 1f       	adc	r27, r21
+   3eaec:	41 50       	subi	r20, 0x01	; 1
+   3eaee:	50 40       	sbci	r21, 0x00	; 0
+   3eaf0:	40 f0       	brcs	.+16     	; 0x3eb02 <__eeupd_block_m2560+0x1c>
+   3eaf2:	cb 01       	movw	r24, r22
+   3eaf4:	84 0f       	add	r24, r20
+   3eaf6:	95 1f       	adc	r25, r21
+   3eaf8:	2e 91       	ld	r18, -X
+   3eafa:	05 d0       	rcall	.+10     	; 0x3eb06 <__eeupd_r18_m2560>
+   3eafc:	41 50       	subi	r20, 0x01	; 1
+   3eafe:	50 40       	sbci	r21, 0x00	; 0
+   3eb00:	d8 f7       	brcc	.-10     	; 0x3eaf8 <__eeupd_block_m2560+0x12>
+   3eb02:	08 95       	ret
+
+0003eb04 <__eeupd_byte_m2560>:
+   3eb04:	26 2f       	mov	r18, r22
+
+0003eb06 <__eeupd_r18_m2560>:
+   3eb06:	f9 99       	sbic	0x1f, 1	; 31
+   3eb08:	fe cf       	rjmp	.-4      	; 0x3eb06 <__eeupd_r18_m2560>
+   3eb0a:	92 bd       	out	0x22, r25	; 34
+   3eb0c:	81 bd       	out	0x21, r24	; 33
+   3eb0e:	f8 9a       	sbi	0x1f, 0	; 31
+   3eb10:	01 97       	sbiw	r24, 0x01	; 1
+   3eb12:	00 b4       	in	r0, 0x20	; 32
+   3eb14:	02 16       	cp	r0, r18
+   3eb16:	39 f0       	breq	.+14     	; 0x3eb26 <__eeupd_r18_m2560+0x20>
+   3eb18:	1f ba       	out	0x1f, r1	; 31
+   3eb1a:	20 bd       	out	0x20, r18	; 32
+   3eb1c:	0f b6       	in	r0, 0x3f	; 63
+   3eb1e:	f8 94       	cli
+   3eb20:	fa 9a       	sbi	0x1f, 2	; 31
+   3eb22:	f9 9a       	sbi	0x1f, 1	; 31
+   3eb24:	0f be       	out	0x3f, r0	; 63
+   3eb26:	08 95       	ret
+
+0003eb28 <__eewr_byte_m2560>:
+   3eb28:	26 2f       	mov	r18, r22
+
+0003eb2a <__eewr_r18_m2560>:
+   3eb2a:	f9 99       	sbic	0x1f, 1	; 31
+   3eb2c:	fe cf       	rjmp	.-4      	; 0x3eb2a <__eewr_r18_m2560>
+   3eb2e:	1f ba       	out	0x1f, r1	; 31
+   3eb30:	92 bd       	out	0x22, r25	; 34
+   3eb32:	81 bd       	out	0x21, r24	; 33
+   3eb34:	20 bd       	out	0x20, r18	; 32
+   3eb36:	0f b6       	in	r0, 0x3f	; 63
+   3eb38:	f8 94       	cli
+   3eb3a:	fa 9a       	sbi	0x1f, 2	; 31
+   3eb3c:	f9 9a       	sbi	0x1f, 1	; 31
+   3eb3e:	0f be       	out	0x3f, r0	; 63
+   3eb40:	01 96       	adiw	r24, 0x01	; 1
+   3eb42:	08 95       	ret
+
+0003eb44 <_exit>:
+   3eb44:	f8 94       	cli
+
+0003eb46 <__stop_program>:
+   3eb46:	ff cf       	rjmp	.-2      	; 0x3eb46 <__stop_program>
